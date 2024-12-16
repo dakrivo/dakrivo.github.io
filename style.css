@@ -24,6 +24,7 @@ body {
   padding: 0px;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 /* Style the links inside the navigation bar */
