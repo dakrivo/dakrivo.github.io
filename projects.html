@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<title>Projects</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<title>Deen Akrivos - Projects</title>
 <style>
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
+
 .mySlides1 {display: none;}
 .mySlides2 {display: none}
 .mySlides3 {display: none}
@@ -16,19 +14,21 @@ body {font-family: Verdana, sans-serif; margin:0}
 .mySlides6 {display: none}
 
 img {
-vertical-align: middle;
+
 height: auto;
-width: 100%;
+width: 75vw;  
+max-width: 400px;
 
 overflow: hidden;
 }
 
 /* Slideshow container */
 .slideshow-container {
-  /* max-height: 400px;  */
+   /* max-height: 400px;  */
+   width: 75vw;
   max-width: 400px; 
   position: relative;
-  margin: auto;
+  margin: 0px;
 }
 
 
@@ -79,17 +79,6 @@ overflow: hidden;
   top: 0;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
 
 .active, .dot:hover {
   background-color: #717171;
@@ -106,10 +95,8 @@ overflow: hidden;
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
+
+
 </style>
 </head>
 <body>
@@ -127,24 +114,23 @@ overflow: hidden;
 </div>
 
 
-<h3 style="padding-left: 50px; text-align:left; padding-top: 50px;"> MECH 490 - Mechanical Engineering Capstone Design Project: Water Ingress Testing Tank for Wearable Timepieces </h3>
+<h3 style="text-align: left; margin-top: min(2vw, 25px)"> MECH 490 - Mechanical Engineering Capstone Design Project: Water Ingress Testing Tank for Wearable Timepieces </h3>
 	
-<div class="row" style ="padding-top: 50px;">
+<div class="row" style ="padding-top: min(1vw,50px);">
 
   
-  <div class="column"  style="margin: 0px; align:center; padding-top: 10px; padding-left: 100px; padding-right: 0px; min-width: 500px; max-width: 60%">
-	<p style = "align:center; background-color: rgba(128,128,128,0.25); padding: 20px;"> 
+  <div class="column-big">
+	<p class="left" style = "background-color: rgba(128,128,128,0.25);"> 
 	This project consisted of designing and manufacturing a water ingress testing tank. This project is funded by our client REMM, a watch manufacturer. 
 	The design process of our product has recently concluded, which included several design reviews with the Engineer in Residence. The multiple considerations included longevity, strength, cost, ease of manufacture of our 30+ components, supplier availibility. among many others.
 	As team leader of this project, my role has been to divide the project into tasks and assign them based on individual knowledge and expertise. I assigned tasks based on dependencies as well such that our team could make concurrent progress, succesfully 
 	achieving our desired results in time for each deadline. My specific responsibilities for the project included the design of the pneumatic pump system, as well as the stress analysis and FEA of the many pump components. The project is still underway, with our most
 	recent deliverable being the final drawing package, which allows us to progress to the manufacturing stage.
-	
-	
+
 	</p>
   </div>
   
-  <div class="column" style="padding-left: 100px; padding-right:100px;  max-width: 40%;">
+  <div class="column-small">
 
 
 <div class="slideshow-container">
@@ -173,12 +159,9 @@ overflow: hidden;
 <a class="next" onclick="plusSlides(1, 2)">❯</a>
 
 </div>
-<br>
+
 
 </div>
-  
-  
-  
   
   
 </div>
@@ -186,12 +169,12 @@ overflow: hidden;
 
 
 
-<h3 style="padding-left: 50px;  text-align:left;"> MECH 390 - Mechanical Engineering Design Project: Unified Power Transmission System for the Textile Industry </h3>
+<h3 style="text-align: left; margin-top: min(2vw, 25px); padding-top: min(5vw, 25px);"> MECH 390 - Mechanical Engineering Design Project: Unified Power Transmission System for the Textile Industry </h3>
 
 	
 	
-<div class="row" style ="padding-top: 50px;">
-  <div class="column" style="padding-left: 100px; padding-right:100px;  max-width: 40%;">
+<div class="row" style ="padding-top: min(1vw,50px);">
+  <div class="column-small">
 
 
 <div class="slideshow-container">
@@ -232,8 +215,8 @@ Your browser does not support the video tag.
 
 </div>
   
-  <div class="column"  style="margin: 0px; align:center; padding-top: 10px; padding-left: 0px; padding-right: 25px; min-width: 500px; max-width: 60%">
-	<p style = "align:center; background-color: rgba(128,128,128,0.25); padding: 20px;"> 
+  <div class="column-big">
+	<p class="right" style = "background-color: rgba(128,128,128,0.25);"> 
 	This project consisted of designing and prototyping a gearbox with one single input (electric motor) and three outputs of specified torques and horsepower for a textile industrial machine.
 	Additionally, the gearbox had 3 selectable modes, which each disabled one of the 3 outputs. In addition to designing a very compact gearbox with a dog-clutch system which allowed the gearbox
 	to change modes during operation, a comprehensive stress analysis of the system was conducted by traditional means. In order to optimize the process of stress analysis on the various shafts in our system (9), 
@@ -246,13 +229,13 @@ Your browser does not support the video tag.
 
 
 
-<h3 style="padding-left: 50px; text-align:left; padding-top: 50px;"> AERO 464 - Airfoil Lift and Drag Numerical Methods Research Paper </h3>
+<h3 style="text-align: left; margin-top: min(2vw, 25px); padding-top: min(5vw, 25px);"> AERO 464 - Airfoil Lift and Drag Numerical Methods Research Paper </h3>
 	
-<div class="row" style ="padding-top: 50px;">
+<div class="row" style ="padding-top: min(1vw,50px);">
 
-  <div class="column"  style="margin: 0px; align:center; padding-top: 10px; padding-left: 100px; padding-right: 0px; min-width: 500px; max-width: 60%">
-	<p style = "align:center; background-color: rgba(128,128,128,0.25); padding: 20px;"> 
-	For our aerodynamics course, a term reseach project was conducted to compare various methods of computing lift and drag on an assigned 4-digit NACA airfoil. The methods compared
+  <div class="column-big">
+	<p class="left" style = "background-color: rgba(128,128,128,0.25);">  
+	For my aerodynamics course, a term reseach project was conducted to compare various methods of computing lift and drag on an assigned 4-digit NACA airfoil. The methods compared
 	were Thin Airfoil Theory, which approximates the airfoil as a flat plate and can easily be solved by hand, Vortex Panel Method, a computational method, and Finite Wing theory, a computational 
 	method which includes wing tip effects in the computation of lift and drag. The methods were compared using python scripts to converge to numerical solutions. The results were also compared with XFOIL, 
 	a commonly used 2D airfoil solver.
@@ -261,7 +244,7 @@ Your browser does not support the video tag.
 	</p>
   </div>
   
-  <div class="column" style="padding-left: 100px; padding-right:100px;  max-width: 40%;">
+  <div class="column-small">
 
 
 <div class="slideshow-container">
@@ -293,12 +276,12 @@ Your browser does not support the video tag.
 </div>
   
   
-<h3 style="padding-left: 50px;  text-align:left;"> Personal - 1993 BMW 318IS (E36) Restoration </h3>
+<h3 style="text-align: left; margin-top: min(2vw, 25px); padding-top: min(5vw, 25px);"> Personal - 1993 BMW 318IS (E36) Restoration </h3>
 
 	
 	
-<div class="row" style ="padding-top: 50px;">
-  <div class="column" style="padding-left: 100px; padding-right:100px;  max-width: 40%;">
+<div class="row" style ="padding-top: min(1vw,50px);">
+  <div class="column-small">
 
 
 <div class="slideshow-container">
@@ -339,8 +322,8 @@ Your browser does not support the video tag.
 
 </div>
   
-  <div class="column"  style="margin: 0px; align:center; padding-top: 10px; padding-left: 0px; padding-right: 25px; min-width: 500px; max-width: 60%">
-	<p style = "align:center; background-color: rgba(128,128,128,0.25); padding: 20px;"> 
+  <div class="column-big">
+	<p class="right" style = "background-color: rgba(128,128,128,0.25);"> 
 	During the COVID-19 lockdown, I found myself with too much time on my hands, and purchased a discarded BMW for 1200$. I brought the car home on a rented UHaul trailer from Gatineau, after it had sat untouched for 
 	2 years.
 	The next day, as I was trying to fix the car, I wondered if I may have gotten in over my head. However, after a few days of work, I was able to get the car started by repairing the clutch cylinder.
@@ -356,20 +339,20 @@ Your browser does not support the video tag.
 
 
 
-<h3 style="padding-left: 50px; text-align:left; padding-top: 50px;"> MECH 368 - 16 BIT Memory using only Logic Gates and Flip-Flops </h3>
+<h3 style="text-align: left; margin-top: min(2vw, 25px); padding-top: min(5vw, 25px);"> MECH 368 - 16 BIT Memory using only Logic Gates and Flip-Flops </h3>
 	
-<div class="row" style ="padding-top: 50px;">
+<div class="row" style ="padding-top: min(1vw,50px);">
 
-  <div class="column"  style="margin: 0px; align:center; padding-top: 10px; padding-left: 100px; padding-right: 0px; min-width: 500px; max-width: 60%">
-	<p style = "align:center; background-color: rgba(128,128,128,0.25); padding: 20px;"> 
-	For our final project for Electronics for Mechanical Engineers, we designed and built a 16 BIT memory, which can be read and written to using DIP switches, using only 
+  <div class="column-big">
+	<p class="left" style = "background-color: rgba(128,128,128,0.25);">  
+	For our final project for "Electronics for Mechanical Engineers", we designed and built a 16 BIT memory, which can be read and written to using DIP switches, using only 
 	basic logic gates and flip-flops. As can be seen in the photos, function was preferred to style in our case. 
 	
 	
 	</p>
   </div>
   
-  <div class="column" style="padding-left: 100px; padding-right:100px;  max-width: 40%;">
+  <div class="column-small">
 
 
 <div class="slideshow-container">
@@ -392,12 +375,12 @@ Your browser does not support the video tag.
 </div>
 </div>
 
-<h3 style="padding-left: 50px;  text-align:left;"> MECH 312 - Machinist's hammer, Keychain, Box, and Square </h3>
+<h3 style="text-align: left; margin-top: min(2vw, 25px); padding-top: min(5vw, 25px);"> MECH 312 - Machinist's hammer, Keychain, Box, and Square </h3>
 
 	
 	
-<div class="row" style ="padding-top: 50px;">
-  <div class="column" style="padding-left: 100px; padding-right:100px;  max-width: 40%;">
+<div class="row" style ="padding-top: min(1vw,50px);">
+  <div class="column-small">
 
 
 <div class="slideshow-container">
@@ -419,8 +402,8 @@ Your browser does not support the video tag.
 
 </div>
   
-  <div class="column"  style="margin: 0px; align:center; padding-top: 10px; padding-left: 0px; padding-right: 25px; min-width: 500px; max-width: 60%">
-	<p style = "align:center; background-color: rgba(128,128,128,0.25); padding: 20px;"> 
+  <div class="column-big">
+	<p class="right" style = "background-color: rgba(128,128,128,0.25);"> 
 		For this project, I was given the drawings for 4 assemblies. A hammer, a square, a keychain, and a box. After making process plans for each part that needed to be manufactured,
 		I used the manual lathe and mill, as well as various hand tools, to manufacture the parts. I also used bending tools to manufacture the box, and a CNC mill to engrave the square.
 	</p>
