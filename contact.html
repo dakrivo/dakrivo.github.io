@@ -40,15 +40,27 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="topnav">
-  <a href="index.html">Home</a>
-  <a href="projects.html">Projects</a>
-  <a href="work.html">Work Experience</a>
-  <a class="active" href="contact.html">Contact</a>
+  <a class="EN" href="index.html">Home</a>
+  <a class="EN" href="projects.html">Projects</a>
+  <a class="EN"href="work.html">Work Experience</a>
+  <a class="active EN" href="contact.html">Contact</a>
+  
+  <a class="FR" href="index.html">Accueil</a>
+  <a class="FR" href="projects.html">Projets</a>
+  <a class="FR" href="work.html">Expérience Travail</a>
+  <a class="active FR" href="contact.html">Contact</a>
+  
+  <!-- Rounded switch -->
+	<label class="switch">
+  <input type="checkbox" id="language" onclick="toggle()">
+  <span class="slider round"><p class="EN lang" style="right: 0">EN</p><p style="left: 0" class="FR lang">FR</p></span>
+</label>
 </div>
 
 <div style="text-align: center;">
  <p>&nbsp</p>	
-<h1> Contact me! </h1>
+<h1 class="EN"> Contact me! </h1>
+<h1 class="FR"> Contactez-moi! </h1>
 
 
 <p> deenakrivos@gmail.com </p>
@@ -57,6 +69,60 @@
 
 
 </div>
+
+<script>
+
+
+const englishText = document.getElementsByClassName("EN");
+const frenchText = document.getElementsByClassName("FR");
+
+
+init();
+
+
+function init() {
+	if (sessionStorage.getItem("language") == null) {
+	sessionStorage.setItem("language", "FR");
+}
+	var checkBox = document.getElementById("language");
+	if (sessionStorage.getItem("language") == "EN") {
+	checkBox.checked = false;
+	for (let i=0; i<englishText.length; i++) {
+	    englishText[i].style.display = "block";
+		frenchText[i].style.display = "none";
+}
+	}
+	else {
+	checkBox.checked = true;
+	for (let i=0; i<englishText.length; i++) {
+		englishText[i].style.display = "none";
+		frenchText[i].style.display = "block";
+	}
+	
+
+}
+}
+
+function toggle() {
+	var checkBox = document.getElementById("language");
+	if (checkBox.checked == true) {
+		sessionStorage.setItem("language", "FR");
+		for (let i=0; i<englishText.length; i++) {
+		englishText[i].style.display = "none";
+		frenchText[i].style.display = "block";
+		}
+	}
+	else{
+		sessionStorage.setItem("language", "EN");
+		for (let i=0; i<englishText.length; i++) {
+		englishText[i].style.display = "block";
+		frenchText[i].style.display = "none";
+		}
+	}
+	
+}
+
+</script>
 
 </body>
 </html>

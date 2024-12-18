@@ -8,10 +8,21 @@
 <body>
 
 <div class="topnav">
-  <a class="active" href="index.html">Home</a>
-  <a href="projects.html">Projects</a>
-  <a href="work.html">Work Experience</a>
-  <a href="contact.html">Contact</a>
+  <a class="active EN" href="index.html">Home</a>
+  <a class="EN" href="projects.html">Projects</a>
+  <a class="EN"href="work.html">Work Experience</a>
+  <a class="EN" href="contact.html">Contact</a>
+  
+  <a class="active FR" href="index.html">Accueil</a>
+  <a class="FR" href="projects.html">Projets</a>
+  <a class="FR" href="work.html">Expérience Travail</a>
+  <a class="FR" href="contact.html">Contact</a>
+  
+  <!-- Rounded switch -->
+	<label class="switch">
+  <input type="checkbox" id="language" onclick="toggle()">
+  <span class="slider round"><p class="EN lang" style="right: 0">EN</p><p style="left: 0" class="FR lang">FR</p></span>
+</label>
 </div>
 
 <p>&nbsp</p>
@@ -22,22 +33,91 @@
   <h1>Deen Akrivos</h1>
 <img align="center" src="assets/profile.jpg" class="rounded"/>
 
-<p>B. Eng - Mechanical Engineering </p>
+<p class="EN">B. Eng - Mechanical Engineering </p>
+<p class="FR">B. Eng - Génie Mécanique </p>
+
 </div>
   </div>
   
   <div class="column-big"  style="margin: 0px;align:center; padding-top: 10vw; padding-left: 5vw; padding-right: 5vw;">
-	<p style = "align:center; background-color: rgba(128,128,128,0.25);" > 
-	I am a soon to graduate Mechanical Engineering Student with a passion for aerospace, fluid dynamics, programming, numerical methods, and much more!
-	I am very ressourceful, and pride myself in solving problems. My favorite feeling is when I solve a particularly challenging problem with a clever solution. 
-	I am also a very fast learner, having taught myself many programming languages. 
-	Consult my project page to see some of my projects.
-	I work part-time at the airport, and have lots of cool experiences, pictures, and videos from my time there. Contact me to learn more!
+	<p class="EN" style = "align:center; background-color: rgba(128,128,128,0.25);" > 
+		I am a soon to graduate Mechanical Engineering Student with a passion for aerospace, fluid dynamics, programming, numerical methods, and much more!
+		I am very ressourceful, and pride myself in solving problems. My favorite feeling is when I solve a particularly challenging problem with a clever solution. 
+		I am also a very fast learner, having taught myself many programming languages. 
+		Consult my project page to see some of my projects.
+		I work part-time at the airport, and have lots of cool experiences, pictures, and videos from my time there. Contact me to learn more!
+	
+	</p>
+		<p class="FR" style = "align:center; background-color: rgba(128,128,128,0.25);" > 
+	Je suis un étudiant en génie mécanique bientôt diplômé, passionné par l'aérospatiale, la dynamique des fluides, la programmation, les méthodes numériques, et bien plus encore !
+	Je suis très débrouillard et fier de résoudre des problèmes. Ce que je préfère, c'est résoudre un problème particulièrement difficile avec une solution intelligente. 
+	J'apprends également très vite, ayant appris moi-même de nombreux langages de programmation. 
+	Consultez ma page de projets pour voir quelques-uns de mes projets.
+	Je travaille à temps partiel à l'aéroport, et j'ai beaucoup d'expériences, de photos et de vidéos de mon passage à l'aéroport. Contactez-moi pour en savoir plus !
+
 	
 	</p>
   </div>
 </div>
 
 
+<script>
+
+
+
+const englishText = document.getElementsByClassName("EN");
+const frenchText = document.getElementsByClassName("FR");
+
+
+init();
+
+
+function init() {
+	if (sessionStorage.getItem("language") == null) {
+	sessionStorage.setItem("language", "FR");
+}
+	var checkBox = document.getElementById("language");
+	if (sessionStorage.getItem("language") == "EN") {
+	checkBox.checked = false;
+	for (let i=0; i<englishText.length; i++) {
+	    englishText[i].style.display = "block";
+		frenchText[i].style.display = "none";
+}
+	}
+	else {
+	checkBox.checked = true;
+	for (let i=0; i<englishText.length; i++) {
+		englishText[i].style.display = "none";
+		frenchText[i].style.display = "block";
+	}
+	
+
+}
+}
+
+function toggle() {
+	var checkBox = document.getElementById("language");
+	if (checkBox.checked == true) {
+		sessionStorage.setItem("language", "FR");
+		for (let i=0; i<englishText.length; i++) {
+		englishText[i].style.display = "none";
+		frenchText[i].style.display = "block";
+		}
+	}
+	else{
+		sessionStorage.setItem("language", "EN");
+		for (let i=0; i<englishText.length; i++) {
+		englishText[i].style.display = "block";
+		frenchText[i].style.display = "none";
+		}
+	}
+	
+}
+</script>
+
 </body>
+
+
+
+
 </html>
