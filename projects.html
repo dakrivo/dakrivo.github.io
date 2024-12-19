@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link href="style.css" rel="stylesheet" type="text/css"/>
 <title>Deen Akrivos - Projects</title>
 <style>
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
+
 .mySlides1 {display: none;}
 .mySlides2 {display: none}
 .mySlides3 {display: none}
@@ -16,19 +14,21 @@ body {font-family: Verdana, sans-serif; margin:0}
 .mySlides6 {display: none}
 
 img {
-vertical-align: middle;
+
 height: auto;
-width: 100%;
+width: 75vw;  
+max-width: 400px;
 
 overflow: hidden;
 }
 
 /* Slideshow container */
 .slideshow-container {
-  /* max-height: 400px;  */
+   /* max-height: 400px;  */
+   width: 75vw;
   max-width: 400px; 
   position: relative;
-  margin: auto;
+  margin: 0px;
 }
 
 
@@ -79,17 +79,6 @@ overflow: hidden;
   top: 0;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
 
 .active, .dot:hover {
   background-color: #717171;
@@ -106,45 +95,62 @@ overflow: hidden;
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
+
+
 </style>
 </head>
 <body>
 
 <div class="topnav">
-  <a href="index.html">Home</a>
-  <a class="active" href="projects.html">Projects</a>
-  <a href="work.html">Work Experience</a>
-  <a href="contact.html">Contact</a>
+  <a class="EN" href="index.html">Home</a>
+  <a class="active EN" href="projects.html">Projects</a>
+  <a class="EN"href="work.html">Work Experience</a>
+  <a class="EN" href="contact.html">Contact</a>
+  
+  <a class="FR" href="index.html">Accueil</a>
+  <a class="active FR" href="projects.html">Projets</a>
+  <a class="FR" href="work.html">Expérience Travail</a>
+  <a class="FR" href="contact.html">Contact</a>
+  
+  <!-- Rounded switch -->
+	<label class="switch">
+  <input type="checkbox" id="language" onclick="toggle()">
+  <span class="slider round"><p class="EN lang" style="right: 0">EN</p><p style="left: 0" class="FR lang">FR</p></span>
+</label>
 </div>
 
 <div>
  <p>&nbsp</p>	
-<h1> Here are some of my projects! </h1>
+<h1  class="EN"> Here are some of my projects! </h1>
+<h1 class="FR"> Voici quelques-uns de mes projets! </h1>
 </div>
 
 
-<h3 style="padding-left: 50px; text-align:left; padding-top: 50px;"> MECH 490 - Mechanical Engineering Capstone Design Project: Water Ingress Testing Tank for Wearable Timepieces </h3>
+<h3 class="EN" style="text-align: left; margin-top: min(2vw, 25px)"> MECH 490 - Mechanical Engineering Capstone Design Project: Water Ingress Testing Tank for Wearable Timepieces </h3>
+<h3 class="FR" style="text-align: left; margin-top: min(2vw, 25px)"> MECH 490 - Projet de conception en génie mécanique : Réservoir d'essai d'infiltration d'eau pour montres portables </h3>
 	
-<div class="row" style ="padding-top: 50px;">
+<div class="row" style ="padding-top: min(1vw,50px);">
 
   
-  <div class="column"  style="margin: 0px; align:center; padding-top: 10px; padding-left: 100px; padding-right: 0px; min-width: 500px; max-width: 60%">
-	<p style = "align:center; background-color: rgba(128,128,128,0.25); padding: 20px;"> 
+  <div class="column-big">
+	<p class="left EN" style = "background-color: rgba(128,128,128,0.25);"> 
 	This project consisted of designing and manufacturing a water ingress testing tank. This project is funded by our client REMM, a watch manufacturer. 
 	The design process of our product has recently concluded, which included several design reviews with the Engineer in Residence. The multiple considerations included longevity, strength, cost, ease of manufacture of our 30+ components, supplier availibility. among many others.
 	As team leader of this project, my role has been to divide the project into tasks and assign them based on individual knowledge and expertise. I assigned tasks based on dependencies as well such that our team could make concurrent progress, succesfully 
 	achieving our desired results in time for each deadline. My specific responsibilities for the project included the design of the pneumatic pump system, as well as the stress analysis and FEA of the many pump components. The project is still underway, with our most
 	recent deliverable being the final drawing package, which allows us to progress to the manufacturing stage.
-	
-	
 	</p>
+	<p class="left FR" style = "background-color: rgba(128,128,128,0.25);"> 
+	Ce projet consistait à concevoir et à fabriquer un réservoir de test de résistance à l'eau. Ce projet est financé par notre client REMM, un fabricant de montres. 
+	Le processus de conception de notre produit s'est récemment achevé, avec plusieurs revues de conception avec l'ingénieur en résidence. Les multiples considérations incluaient la longévité, la résistance, le coût, la facilité de fabrication de nos plus de 30 composants, la disponibilité des fournisseurs, parmi beaucoup d'autres.
+	En tant que chef d'équipe de ce projet, mon rôle a consisté à diviser le projet en tâches et à les répartir en fonction des connaissances et de l'expertise de chacun. J'ai également réparti les tâches en fonction des dépendances afin que notre équipe puisse progresser simultanément et réussir à atteindre les résultats souhaités dans les délais impartis pour chaque tâche. 
+	les résultats escomptés dans les délais impartis pour chaque échéance. Mes responsabilités spécifiques pour ce projet comprenaient la conception du système de pompe pneumatique, ainsi que l'analyse des contraintes et l'analyse par éléments finis des nombreux composants de la pompe. Le projet est toujours en cours.
+	Le projet est toujours en cours, notre dernier produit livrable étant l'ensemble des dessins finaux, qui nous permet de passer à l'étape de la fabrication.
+	</p>
+	
   </div>
   
-  <div class="column" style="padding-left: 100px; padding-right:100px;  max-width: 40%;">
+  <div class="column-small">
 
 
 <div class="slideshow-container">
@@ -173,12 +179,9 @@ overflow: hidden;
 <a class="next" onclick="plusSlides(1, 2)">❯</a>
 
 </div>
-<br>
+
 
 </div>
-  
-  
-  
   
   
 </div>
@@ -186,12 +189,12 @@ overflow: hidden;
 
 
 
-<h3 style="padding-left: 50px;  text-align:left;"> MECH 390 - Mechanical Engineering Design Project: Unified Power Transmission System for the Textile Industry </h3>
-
+<h3 class="EN" style="text-align: left; margin-top: min(2vw, 25px); padding-top: min(5vw, 25px);"> MECH 390 - Mechanical Engineering Design Project: Unified Power Transmission System for the Textile Industry </h3>
+<h3 class="FR" style="text-align: left; margin-top: min(2vw, 25px); padding-top: min(5vw, 25px);"> MECH 390 - Projet de conception en ingénierie mécanique : Système de transmission de puissance unifié pour l'industrie textile </h3>
 	
 	
-<div class="row" style ="padding-top: 50px;">
-  <div class="column" style="padding-left: 100px; padding-right:100px;  max-width: 40%;">
+<div class="row" style ="padding-top: min(1vw,50px);">
+  <div class="column-small">
 
 
 <div class="slideshow-container">
@@ -232,8 +235,8 @@ Your browser does not support the video tag.
 
 </div>
   
-  <div class="column"  style="margin: 0px; align:center; padding-top: 10px; padding-left: 0px; padding-right: 25px; min-width: 500px; max-width: 60%">
-	<p style = "align:center; background-color: rgba(128,128,128,0.25); padding: 20px;"> 
+  <div class="column-big">
+	<p class="right EN" style = "background-color: rgba(128,128,128,0.25);"> 
 	This project consisted of designing and prototyping a gearbox with one single input (electric motor) and three outputs of specified torques and horsepower for a textile industrial machine.
 	Additionally, the gearbox had 3 selectable modes, which each disabled one of the 3 outputs. In addition to designing a very compact gearbox with a dog-clutch system which allowed the gearbox
 	to change modes during operation, a comprehensive stress analysis of the system was conducted by traditional means. In order to optimize the process of stress analysis on the various shafts in our system (9), 
@@ -241,45 +244,60 @@ Your browser does not support the video tag.
 	Additionally, I performed FEA on the gear teeth and dog clutch mechanism to ensure reliability under fatigue failure conditions to corroborate the traditional stress analysis.
 	
 	</p>
+	
+	<p class="right FR" style = "background-color: rgba(128,128,128,0.25);"> 
+	Ce projet consistait à concevoir et à prototyper une boîte de vitesses avec une seule entrée (moteur électrique) et trois sorties de couples et de puissances spécifiés pour une machine industrielle textile.
+	En outre, la boîte de vitesses avait 3 modes sélectionnables, qui désactivaient chacun l'une des 3 sorties. Outre la conception d'une boîte de vitesses très compacte avec un système d'embrayage à crabot qui permettait à la boîte de vitesses
+	de changer de mode en cours de fonctionnement, une analyse complète des contraintes du système a été réalisée par des moyens traditionnels. Afin d'optimiser le processus d'analyse des contraintes sur les différents arbres de notre système (9), 
+	J'ai créé un programme MATLAB qui a calculé tous les diagrammes de cisaillement et de flexion, puis le diamètre minimal de l'arbre sur toute sa longueur, en tenant compte des concentrations de contraintes. 
+	En outre, j'ai effectué une analyse par éléments finis sur les dents de l'engrenage et le mécanisme de l'embrayage à crabes pour garantir la fiabilité dans des conditions de défaillance par fatigue afin de corroborer l'analyse traditionnelle des contraintes.
+	
+	</p>
   </div>
 </div>
 
 
 
-<h3 style="padding-left: 50px; text-align:left; padding-top: 50px;"> AERO 464 - Airfoil Lift and Drag Numerical Methods Research Paper </h3>
+<h3 class="EN" style="text-align: left; margin-top: min(2vw, 25px); padding-top: min(5vw, 25px);"> AERO 464 - Airfoil Lift and Drag Numerical Methods Research Paper </h3>
+<h3 class="FR" style="text-align: left; margin-top: min(2vw, 25px); padding-top: min(5vw, 25px);"> AERO 464 - Méthodes numériques pour la portance et la traînée des profils aérodynamiques </h3>	
 	
-<div class="row" style ="padding-top: 50px;">
+<div class="row" style ="padding-top: min(1vw,50px);">
 
-  <div class="column"  style="margin: 0px; align:center; padding-top: 10px; padding-left: 100px; padding-right: 0px; min-width: 500px; max-width: 60%">
-	<p style = "align:center; background-color: rgba(128,128,128,0.25); padding: 20px;"> 
-	For our aerodynamics course, a term reseach project was conducted to compare various methods of computing lift and drag on an assigned 4-digit NACA airfoil. The methods compared
+  <div class="column-big">
+	<p class="left EN" style = "background-color: rgba(128,128,128,0.25);">  
+	For my aerodynamics course, a term reseach project was conducted to compare various methods of computing lift and drag on an assigned 4-digit NACA airfoil. The methods compared
 	were Thin Airfoil Theory, which approximates the airfoil as a flat plate and can easily be solved by hand, Vortex Panel Method, a computational method, and Finite Wing theory, a computational 
 	method which includes wing tip effects in the computation of lift and drag. The methods were compared using python scripts to converge to numerical solutions. The results were also compared with XFOIL, 
 	a commonly used 2D airfoil solver.
-	
-	
 	</p>
+		<p class="left FR" style = "background-color: rgba(128,128,128,0.25);">  
+	Dans le cadre de mon cours d'aérodynamique, un projet de recherche a été mené pour comparer différentes méthodes de calcul de la portance et de la traînée sur un profil NACA à 4 chiffres. Les méthodes comparées
+	Les méthodes comparées étaient la Thin Airfoil Theory (théorie du profil mince), qui approxime le profil comme une plaque plane et peut facilement être résolue à la main, la Vortex Panel Method (méthode du panneau tourbillonnaire), une méthode de calcul, et la Finite Wing Theory (théorie des ailes finies), une méthode de calcul qui inclut les effets de l'extrémité de l'aile dans le calcul du profil. 
+	de calcul qui inclut les effets de bout d'aile dans le calcul de la portance et de la traînée. Les méthodes ont été comparées à l'aide de scripts python pour converger vers des solutions numériques. Les résultats ont également été comparés à ceux de XFOIL, 
+	un solveur de profil aérodynamique 2D couramment utilisé.
+	</p>
+	
   </div>
   
-  <div class="column" style="padding-left: 100px; padding-right:100px;  max-width: 40%;">
+  <div class="column-small">
 
 
 <div class="slideshow-container">
 
 <div class="mySlides3 fade">
-  <img src="assets/464/img1.jpg">
+  <img src="assets/464/img1.JPG">
 </div>
 
 <div class="mySlides3 fade">
-  <img src="assets/464/img2.jpg">
+  <img src="assets/464/img2.JPG">
 </div>
 
 <div class="mySlides3 fade">
-  <img src="assets/464/img3.jpg">
+  <img src="assets/464/img3.JPG">
 </div>
 
 <div class="mySlides3 fade">
-  <img src="assets/464/img4.jpg">
+  <img src="assets/464/img4.JPG">
 </div>
 
 
@@ -293,12 +311,13 @@ Your browser does not support the video tag.
 </div>
   
   
-<h3 style="padding-left: 50px;  text-align:left;"> Personal - 1993 BMW 318IS (E36) Restoration </h3>
+<h3 class="EN" style="text-align: left; margin-top: min(2vw, 25px); padding-top: min(5vw, 25px);"> Personal - 1993 BMW 318IS (E36) Restoration </h3>
+<h3 class="FR" style="text-align: left; margin-top: min(2vw, 25px); padding-top: min(5vw, 25px);"> Personnel - Restauration de la BMW 318IS (E36) 1993 </h3>
 
 	
 	
-<div class="row" style ="padding-top: 50px;">
-  <div class="column" style="padding-left: 100px; padding-right:100px;  max-width: 40%;">
+<div class="row" style ="padding-top: min(1vw,50px);">
+  <div class="column-small">
 
 
 <div class="slideshow-container">
@@ -339,8 +358,8 @@ Your browser does not support the video tag.
 
 </div>
   
-  <div class="column"  style="margin: 0px; align:center; padding-top: 10px; padding-left: 0px; padding-right: 25px; min-width: 500px; max-width: 60%">
-	<p style = "align:center; background-color: rgba(128,128,128,0.25); padding: 20px;"> 
+  <div class="column-big">
+	<p class="right EN" style = "background-color: rgba(128,128,128,0.25);"> 
 	During the COVID-19 lockdown, I found myself with too much time on my hands, and purchased a discarded BMW for 1200$. I brought the car home on a rented UHaul trailer from Gatineau, after it had sat untouched for 
 	2 years.
 	The next day, as I was trying to fix the car, I wondered if I may have gotten in over my head. However, after a few days of work, I was able to get the car started by repairing the clutch cylinder.
@@ -350,32 +369,50 @@ Your browser does not support the video tag.
 	made the difficult decision to sell it. Being that it was a classic car that was now working and looking better than ever, I was able to resell it for many times what I purchased it for.
 	
 	</p>
-  </div>
-</div>
-</div>
-
-
-
-<h3 style="padding-left: 50px; text-align:left; padding-top: 50px;"> MECH 368 - 16 BIT Memory using only Logic Gates and Flip-Flops </h3>
 	
-<div class="row" style ="padding-top: 50px;">
-
-  <div class="column"  style="margin: 0px; align:center; padding-top: 10px; padding-left: 100px; padding-right: 0px; min-width: 500px; max-width: 60%">
-	<p style = "align:center; background-color: rgba(128,128,128,0.25); padding: 20px;"> 
-	For our final project for Electronics for Mechanical Engineers, we designed and built a 16 BIT memory, which can be read and written to using DIP switches, using only 
-	basic logic gates and flip-flops. As can be seen in the photos, function was preferred to style in our case. 
-	
+		<p class="right FR" style = "background-color: rgba(128,128,128,0.25);"> 
+	Pendant le confinement de COVID-19, je me suis retrouvé avec trop de temps libre et j'ai acheté une BMW hors d'usage pour 1200$. J'ai ramené la voiture à la maison dans une remorque UHaul louée à Gatineau, après qu'elle soit restée intacte pendant deux ans. 
+	2 ans.
+	Le lendemain, alors que j'essayais de réparer la voiture, je me suis demandé si je ne m'étais pas fourvoyé. Cependant, après quelques jours de travail, j'ai pu faire démarrer la voiture en réparant le cylindre d'embrayage.
+	Après un été de travail, j'ai réussi à réparer d'autres parties de la voiture, en remplaçant la transmission et l'embrayage, en remplaçant les systèmes de suspension et de freinage par de nouveaux composants, et en réparant divers problèmes, tels que la pompe à essence, la pompe à eau, la pompe à essence, la pompe à essence et la pompe à essence. 
+	problèmes, tels que la pompe à essence, les conduites de frein, les conduites de gaz, les roulements de roue, le joint de couvercle de soupape, le radiateur, les courroies, les ventilateurs, les poulies, et bien d'autres encore. J'ai également appris à faire de la carrosserie, en trouvant un aileron dans une casse et en le peignant pour qu'il soit assorti à la carrosserie.
+	à la casse et l'ai peint pour qu'il soit assorti au rouge de ma nouvelle BMW (vieille de 30 ans). Malheureusement, lorsque je suis entré à l'université, je n'avais plus le temps, l'argent ou l'espace pour continuer à m'occuper de ma voiture à problèmes, et j'ai pris la décision difficile de la vendre. 
+	et j'ai pris la difficile décision de la vendre. Comme il s'agissait d'une voiture classique qui fonctionnait et était plus belle que jamais, j'ai pu la revendre plusieurs fois plus cher que je ne l'avais achetée.
 	
 	</p>
+	
+  </div>
+</div>
+</div>
+
+
+
+<h3 class="EN" style="text-align: left; margin-top: min(2vw, 25px); padding-top: min(5vw, 25px);"> MECH 368 - 16 BIT Memory using only Logic Gates and Flip-Flops </h3>
+<h3 class="FR" style="text-align: left; margin-top: min(2vw, 25px); padding-top: min(5vw, 25px);"> MECH 368 - Mémoire 16 BIT utilisant uniquement des portes logiques et des bascules </h3>
+	
+<div class="row" style ="padding-top: min(1vw,50px);">
+
+  <div class="column-big">
+	<p class="left EN" style = "background-color: rgba(128,128,128,0.25);">  
+	For our final project for "Electronics for Mechanical Engineers", we designed and built a 16 BIT memory, which can be read and written to using DIP switches, using only 
+	basic logic gates and flip-flops. As can be seen in the photos, function was preferred to style in our case. 
+	
+	</p>
+		<p class="left FR" style = "background-color: rgba(128,128,128,0.25);">  
+	Pour notre projet de fin d'études « Electronics for Mechanical Engineers », nous avons conçu et construit une mémoire de 16 bits, qui peut être lue et écrite à l'aide de commutateurs DIP, en utilisant uniquement des portes logiques et des bascules de base. 
+	des portes logiques et des bascules de base. Comme on peut le voir sur les photos, la fonction a été préférée au style dans notre cas. 
+	
+	</p>
+	
   </div>
   
-  <div class="column" style="padding-left: 100px; padding-right:100px;  max-width: 40%;">
+  <div class="column-small">
 
 
 <div class="slideshow-container">
 
 <div class="mySlides5 fade">
-  <img src="assets/368/img1.png">
+  <img src="assets/368/img1.PNG">
 </div>
 
 <div class="mySlides5 fade">
@@ -392,12 +429,13 @@ Your browser does not support the video tag.
 </div>
 </div>
 
-<h3 style="padding-left: 50px;  text-align:left;"> MECH 312 - Machinist's hammer, Keychain, Box, and Square </h3>
+<h3 class="EN" style="text-align: left; margin-top: min(2vw, 25px); padding-top: min(5vw, 25px);"> MECH 312 - Machinist's hammer, Keychain, Box, and Square </h3>
+<h3 class="FR" style="text-align: left; margin-top: min(2vw, 25px); padding-top: min(5vw, 25px);"> MECH 312 - Marteau de machiniste, porte-clés, boîte et équerre </h3>
 
 	
 	
-<div class="row" style ="padding-top: 50px;">
-  <div class="column" style="padding-left: 100px; padding-right:100px;  max-width: 40%;">
+<div class="row" style ="padding-top: min(1vw,50px);">
+  <div class="column-small">
 
 
 <div class="slideshow-container">
@@ -419,10 +457,14 @@ Your browser does not support the video tag.
 
 </div>
   
-  <div class="column"  style="margin: 0px; align:center; padding-top: 10px; padding-left: 0px; padding-right: 25px; min-width: 500px; max-width: 60%">
-	<p style = "align:center; background-color: rgba(128,128,128,0.25); padding: 20px;"> 
+  <div class="column-big">
+	<p class="right EN" style = "background-color: rgba(128,128,128,0.25);"> 
 		For this project, I was given the drawings for 4 assemblies. A hammer, a square, a keychain, and a box. After making process plans for each part that needed to be manufactured,
 		I used the manual lathe and mill, as well as various hand tools, to manufacture the parts. I also used bending tools to manufacture the box, and a CNC mill to engrave the square.
+	</p>
+		<p class="right FR" style = "background-color: rgba(128,128,128,0.25);"> 
+		Pour ce projet, on m'a donné les dessins de 4 assemblages. Un marteau, une équerre, un porte-clés et une boîte. Après avoir élaboré des plans de processus pour chaque pièce à fabriquer, j'ai utilisé le tour et la fraise manuels, ainsi que divers outils manuels, pour fabriquer les pièces,
+		J'ai utilisé le tour et la fraise manuels, ainsi que divers outils à main, pour fabriquer les pièces. J'ai également utilisé des outils de pliage pour fabriquer la boîte et une fraiseuse à commande numérique pour graver l'équerre.
 	</p>
   </div>
 </div>
@@ -459,6 +501,56 @@ function showSlides(n, j) {
   slides[slideIndex-1].style.display = "block";
 }
 
+
+
+const englishText = document.getElementsByClassName("EN");
+const frenchText = document.getElementsByClassName("FR");
+
+
+init();
+
+
+function init() {
+	if (sessionStorage.getItem("language") == null) {
+	sessionStorage.setItem("language", "FR");
+}
+	var checkBox = document.getElementById("language");
+	if (sessionStorage.getItem("language") == "EN") {
+	checkBox.checked = false;
+	for (let i=0; i<englishText.length; i++) {
+	    englishText[i].style.display = "block";
+		frenchText[i].style.display = "none";
+}
+	}
+	else {
+	checkBox.checked = true;
+	for (let i=0; i<englishText.length; i++) {
+		englishText[i].style.display = "none";
+		frenchText[i].style.display = "block";
+	}
+	
+
+}
+}
+
+function toggle() {
+	var checkBox = document.getElementById("language");
+	if (checkBox.checked == true) {
+		sessionStorage.setItem("language", "FR");
+		for (let i=0; i<englishText.length; i++) {
+		englishText[i].style.display = "none";
+		frenchText[i].style.display = "block";
+		}
+	}
+	else{
+		sessionStorage.setItem("language", "EN");
+		for (let i=0; i<englishText.length; i++) {
+		englishText[i].style.display = "block";
+		frenchText[i].style.display = "none";
+		}
+	}
+	
+}
 
   </script>
 </body>

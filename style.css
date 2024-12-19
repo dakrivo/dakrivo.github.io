@@ -1,8 +1,25 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+	/*  * {
+			  background: #000 !important;
+			  color: #0f0 !important;
+			  outline: solid #f00 1px !important;
+			}  
+			
+			*/
+
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
 }
 
 body {
@@ -12,18 +29,20 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-family: Verdana, sans-serif; 
-  margin:0;
+  margin:0px;
+  width:100%;
+  max-width:100%;
 }
 
 
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #333;
-  overflow: hidden;	
+  overflow: hidden;	 
   margin: 0px;
   padding: 0px;
   position: sticky;
-  top: 0;
+  top: 0px;
   z-index: 1;
 }
 
@@ -32,9 +51,17 @@ body {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: min(1.5vw, 14px)  min(2vw, 16px);
   text-decoration: none;
-  font-size: 100%;
+  font-size: min(3vw, 18px);
+  
+}
+
+
+.topnav label {
+  float: right;
+  margin: min(1.5vw, 8px)  min(2vw, 10px);
+  text-decoration: none;;
   
 }
 
@@ -54,13 +81,13 @@ body {
 img.rounded {
   object-fit: cover;
   border-radius: 50%;
-  min-height: 100px;
-  min-width: 100px;
+  height: 60vw;
+  width: 60vw;
   max-height: 400px;
   max-width: 400px;
   display: block;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 0px;
+  margin-right: 0px;
   padding: 20px;
 }
 
@@ -68,21 +95,26 @@ h1 {
   color: white;
   text-align: center;
   font-family: tahoma;
+  font-size: min(6vw, 36px);
+  padding: min(2vw, 5px);
+  
 }
 
 h3 {
   color: white;
   text-align: center;
   font-family: tahoma;
-  margin-top: 50px;
+  padding: min(2vw, 5px);
+  padding-left: min(4vw, 25px);
+  font-size: min(4vw, 24px);
 }
 
 p {
   text-align: center;
   color: white;
   font-family: verdana;
-  font-size: 20px;
-  padding: 10px;
+  font-size: min(4vw, 20px);
+  padding: min(5vw, 10px);
 
   
 }
@@ -93,9 +125,40 @@ display: flex;
       flex-direction: column; /* Ensures it's a vertical column layout */
       justify-content: center; /* Centers vertically */
       align-items: center; /* Centers horizontally */
-	  margin:0 ;
-	  padding: 0;  
-	  /*border: 1px solid #ccc;  Optional, for visualization */
+	  margin: 0px;
+	  padding: min(5vw, 10px);
+		
+	 /* border: 1px solid #ccc;  Optional, for visualization */
+      /*background-color: #f9f9f9;  Optional, for visualization */
+	   height: auto;
+	   box-sizing: border-box;
+}
+
+.column-small {
+  float: left;
+display: flex;
+      flex-direction: column; /* Ensures it's a vertical column layout */
+      justify-content: center; /* Centers vertically */
+     align-items: center; /* Centers horizontally */ 
+	  margin: 0px;
+	 padding: 0px; 
+	width:39.5vw;
+	    /* border: 1px solid #ccc;  Optional, for visualization */
+      /*background-color: #f9f9f9;  Optional, for visualization */
+	   height: auto;
+	   box-sizing: border-box;
+}
+
+.column-big {
+  float: left;
+	display: flex;
+      flex-direction: column; /* Ensures it's a vertical column layout */
+      justify-content: center; /* Centers vertically */
+     align-items: center; /* Centers horizontally */ 
+	  margin: 0px;
+	  padding: min(5vw, 10px);  
+		width:59.5vw;
+	    /* border: 1px solid #ccc;  Optional, for visualization */
       /*background-color: #f9f9f9;  Optional, for visualization */
 	   height: auto;
 	   box-sizing: border-box;
@@ -108,9 +171,102 @@ display: flex;
   clear: both;
 }
 
-@media screen and (max-width: 1200px) {
-
+@media screen and (max-width: 1000px) {
+  .column-small {
+    width: 100vw;
+  }
+    .column-big {
+    width: 100vw;
+  }
   
+}
+
+ .left {
+	 margin-left: min(5vw, 100px);
+	 margin-right: min(5vw, 15px);
+ }
+ 
+  .right {
+	 margin-right: min(5vw, 100px);
+	 margin-left: min(5vw, 15px);
+ }
+ 
 
 
 
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: min(10vw, 60px);
+  height: min(6vw, 34px);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  
+}
+.lang{
+  background: none;
+  font-size: min(2vw, 16px);
+  top: -3px;
+  color: black;
+  position: absolute;
+}
+
+.EN {opacity: 1;}
+.FR {opacity: 1;}
+
+
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: min(4vw, 26px);
+  width: min(4vw, 26px);
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  opacity: 0.5;
+}
+
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(min(4vw, 26px));
+  -ms-transform: translateX(min(4vw, 26px));
+  transform: translateX(min(4vw, 26px));
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+  
+  
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
