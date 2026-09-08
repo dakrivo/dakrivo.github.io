@@ -1,0 +1,18 @@
+# Deen Akrivos
+
+> Deen Akrivos is a Master's (MASc) researcher in Mechanical Engineering at Concordia University's Turbulence Research Lab (CTRL), working at the intersection of high-fidelity CFD and machine learning. Current research covers hydrogen combustion (jets in crossflow) for low-carbon propulsion and power generation, and reinforcement-learning-based turbulence closure modelling.
+
+He also founded [Vortic CFD](https://vortic.ca), an applied CFD/AI consultancy, and previously worked airside at Montreal-Trudeau airport and at CAE on aircraft simulator software.
+
+## Research
+
+- [Jet spacing effects on flame structure and CVP interaction in reacting hydrogen jets in crossflow](https://dakrivo.com/projects/): high-fidelity LES study (Concordia University) of dual reacting hydrogen jets in crossflow, in preparation for peer-reviewed publication.
+- [A velocity-feedback framework for deep reinforcement learning-augmented turbulence modelling](https://dakrivo.com/projects/): a reinforcement-learning framework correcting RANS turbulence closures against DNS/LES data, coupling OpenFOAM, PyTorch, and LibTorch.
+
+## Site sections
+
+- [Home](https://dakrivo.com/): bio, research summary, toolkit.
+- [Projects](https://dakrivo.com/projects/): research projects and other engineering/personal projects.
+- [Work Experience](https://dakrivo.com/work/): work history and education.
+- [Blog](https://dakrivo.com/blog/): notes on research, CFD, and Vortic.
+- [Contact](https://dakrivo.com/contact/): deenakrivos@gmail.com.

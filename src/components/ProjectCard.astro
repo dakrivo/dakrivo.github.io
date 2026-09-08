@@ -6,6 +6,8 @@ interface Props {
 }
 
 const { project } = Astro.props;
+
+const lightboxId = (img: string) => `lb-${img.replace(/[^a-zA-Z0-9]/g, '-')}`;
 ---
 
 <article class:list={['card', { featured: project.featured }]}>
@@ -32,13 +34,28 @@ const { project } = Astro.props;
 	{project.images && project.images.length > 0 && (
 		<div class="gallery">
 			{project.images.map((img) => (
-				<a href={`/assets/${img}`} target="_blank" rel="noopener">
-					<img src={`/assets/${img}`} loading="lazy" alt="" />
+				<a href={`#${lightboxId(img)}`}>
+					<img src={`/assets/${img}`} loading="lazy" alt={`${project.title.en} — figure`} />
 				</a>
 			))}
 		</div>
 	)}
+	{project.videos && project.videos.length > 0 && (
+		<div class="gallery videos">
+			{project.videos.map((v) => (
+				<video src={v.src} poster={v.poster} controls muted loop playsinline preload="metadata" />
+			))}
+		</div>
+	)}
 </article>
+
+{project.images && project.images.map((img) => (
+	<div class="lightbox" id={lightboxId(img)}>
+		<a href="#" class="lightbox-backdrop" aria-label="Close"></a>
+		<img src={`/assets/${img}`} alt={`${project.title.en} — figure`} />
+		<a href="#" class="lightbox-close" aria-label="Close">×</a>
+	</div>
+))}
 
 <style>
 	.card {
@@ -133,5 +150,15 @@ const { project } = Astro.props;
 	.gallery a:hover img {
 		transform: scale(1.03);
 		opacity: 0.9;
+	}
+
+	.gallery.videos {
+		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	}
+
+	.gallery.videos video {
+		width: 100%;
+		border-radius: var(--radius);
+		background: #000;
 	}
 </style>

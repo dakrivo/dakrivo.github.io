@@ -7,8 +7,8 @@ export const bio: { headline: Bi; paragraphs: Bi[] } = {
 	},
 	paragraphs: [
 		{
-			en: "I'm a Master's (MASc) researcher in Mechanical Engineering at Concordia University's Turbulence Research Lab (CTRL), working at the intersection of high-fidelity CFD and machine learning. My current research runs on two threads: large-eddy simulations of dual reacting hydrogen jets in crossflow for combustor design, and a reinforcement-learning framework for correcting RANS turbulence closures against DNS/LES data, built on a coupled OpenFOAM / PyTorch / LibTorch pipeline.",
-			fr: "Je suis chercheur à la maîtrise (MASc) en génie mécanique au Concordia Turbulence Research Lab (CTRL), à la croisée de la CFD haute-fidélité et de l'apprentissage automatique. Mes travaux actuels suivent deux axes : des simulations LES de jets d'hydrogène réactifs jumelés en écoulement transversal pour la conception de chambres de combustion, et un cadre d'apprentissage par renforcement pour corriger les fermetures de turbulence RANS à partir de données DNS/LES, sur un pipeline couplé OpenFOAM / PyTorch / LibTorch.",
+			en: "I'm a Master's (MASc) researcher in Mechanical Engineering at Concordia University's Turbulence Research Lab (CTRL), working at the intersection of high-fidelity CFD and machine learning. My current research runs on two threads: large-eddy simulations of hydrogen combustion — a carbon-free fuel central to decarbonizing aviation and power generation — studying dual reacting hydrogen jets in crossflow for combustor design, and a reinforcement-learning framework for correcting RANS turbulence closures against DNS/LES data, built on a coupled OpenFOAM / PyTorch / LibTorch pipeline.",
+			fr: "Je suis chercheur à la maîtrise (MASc) en génie mécanique au Concordia Turbulence Research Lab (CTRL), à la croisée de la CFD haute-fidélité et de l'apprentissage automatique. Mes travaux actuels suivent deux axes : des simulations LES de la combustion de l'hydrogène — un carburant sans carbone central à la décarbonation de l'aviation et de la production d'énergie — sur des jets d'hydrogène réactifs jumelés en écoulement transversal pour la conception de chambres de combustion, et un cadre d'apprentissage par renforcement pour corriger les fermetures de turbulence RANS à partir de données DNS/LES, sur un pipeline couplé OpenFOAM / PyTorch / LibTorch.",
 		},
 		{
 			en: "Outside the lab, I founded Vortic CFD, turning CFD simulations of modified cars into short-form educational content, and spent several years working airside at Montreal-Trudeau airport as a licensed aircraft tow operator and team lead. I hold a Bachelor of Engineering (Mechanical, Co-op) from Concordia, graduated with distinction, and have taught thermodynamics and PDEs as a teaching assistant.",
@@ -112,6 +112,7 @@ export type ProjectEntry = {
 	summary: Bi;
 	link?: { href: string; label: string };
 	images?: string[];
+	videos?: { src: string; poster: string }[];
 	featured?: boolean;
 };
 
@@ -125,8 +126,8 @@ export const researchProjects: ProjectEntry[] = [
 		years: '2025–Present',
 		tags: ['LES', 'OpenFOAM', 'StarCCM+', 'Combustion', 'HPC'],
 		summary: {
-			en: 'High-fidelity LES (validated to quasi-DNS accuracy) of dual reacting hydrogen jets in crossflow across a range of jet-to-jet spacings. Shows that reaction — not kinematics — organizes and drives coherent vortex shedding, with a dominant, phase-locked shedding mode strongly coherent with heat-release rate. Results are informing wall-confined, low-momentum-ratio hydrogen combustor design guidelines and are being prepared for peer-reviewed publication.',
-			fr: "Simulations LES haute-fidélité (validées à une précision quasi-DNS) de jets d'hydrogène réactifs jumelés en écoulement transversal, pour différents espacements inter-jets. Les résultats montrent que c'est la réaction, et non la cinématique, qui organise et entraîne le détachement tourbillonnaire cohérent, avec un mode de détachement dominant et verrouillé en phase avec le taux de dégagement de chaleur. Ces résultats orientent les lignes directrices de conception de chambres de combustion à l'hydrogène à faible rapport de quantité de mouvement, en vue d'une publication évaluée par les pairs.",
+			en: "Hydrogen is one of the most promising carbon-free fuels for decarbonizing aviation and power generation, but burning it safely and efficiently demands a much finer understanding of hydrogen flame behavior than conventional hydrocarbons require. This project runs high-fidelity LES (validated to quasi-DNS accuracy) of dual reacting hydrogen jets in crossflow across a range of jet-to-jet spacings, showing that reaction — not kinematics — organizes and drives coherent vortex shedding, with a dominant, phase-locked shedding mode strongly coherent with heat-release rate. Results are informing wall-confined, low-momentum-ratio hydrogen combustor design guidelines and are being prepared for peer-reviewed publication.",
+			fr: "L'hydrogène est l'un des carburants sans carbone les plus prometteurs pour décarboner l'aviation et la production d'énergie, mais sa combustion sécuritaire et efficace exige une compréhension beaucoup plus fine du comportement des flammes d'hydrogène que pour les hydrocarbures conventionnels. Ce projet réalise des simulations LES haute-fidélité (validées à une précision quasi-DNS) de jets d'hydrogène réactifs jumelés en écoulement transversal, pour différents espacements inter-jets. Les résultats montrent que c'est la réaction, et non la cinématique, qui organise et entraîne le détachement tourbillonnaire cohérent, avec un mode de détachement dominant et verrouillé en phase avec le taux de dégagement de chaleur. Ces résultats orientent les lignes directrices de conception de chambres de combustion à l'hydrogène à faible rapport de quantité de mouvement, en vue d'une publication évaluée par les pairs.",
 		},
 		images: ['jicf/jicf-fig1.png', 'jicf/jicf-fig2.png'],
 		featured: true,
@@ -143,7 +144,7 @@ export const researchProjects: ProjectEntry[] = [
 			en: 'A framework and toolkit for training reinforcement-learning turbulence closure models that correct RANS predictions against high-fidelity DNS/LES data, coupling OpenFOAM with PyTorch during training and a C++/LibTorch pipeline for production CFD inference. Built a standardized high-fidelity dataset, validated closures across multiple flow geometries, and co-supervised an undergraduate capstone team building a water tunnel for the CTRL.',
 			fr: "Un cadre et une boîte à outils pour entraîner des modèles de fermeture de turbulence par apprentissage par renforcement, corrigeant les prédictions RANS à partir de données DNS/LES haute-fidélité, couplant OpenFOAM et PyTorch à l'entraînement et un pipeline C++/LibTorch pour l'inférence en production. Un jeu de données haute-fidélité standardisé a été constitué, les fermetures validées sur plusieurs géométries d'écoulement, en co-supervisant une équipe de capstone au premier cycle construisant un tunnel hydrodynamique pour le CTRL.",
 		},
-		images: ['ml-turbulence/flow.png'],
+		images: ['ml-turbulence/framework.png'],
 		featured: true,
 	},
 ];
@@ -158,6 +159,10 @@ export const otherProjects: ProjectEntry[] = [
 			fr: "Fondateur et responsable de Vortic CFD, une entreprise de services en IA appliquant la modélisation informée par la CFD, couplée à du contenu éducatif sur les réseaux sociaux basé sur de vraies simulations OpenFOAM de voitures modifiées.",
 		},
 		link: { href: 'https://vortic.ca', label: 'vortic.ca' },
+		videos: [
+			{ src: '/video/case-wing-hero.mp4', poster: '/video/case-wing-hero-poster.jpg' },
+			{ src: '/video/case-aero-groundeffect.mp4', poster: '/video/case-aero-groundeffect-poster.jpg' },
+		],
 	},
 	{
 		title: { en: 'Aerodynamic analysis of modified race cars', fr: 'Analyse aérodynamique de voitures de course modifiées' },
@@ -167,6 +172,7 @@ export const otherProjects: ProjectEntry[] = [
 			en: '3D-scanned (LiDAR) modified vehicles, meshed the geometry in Blender, and ran full aerodynamic analyses in OpenFOAM to evaluate lift and drag. Delivered comprehensive aerodynamic reports recommending modifications (spoiler, wing, lip, skirts) tailored to each vehicle.',
 			fr: "Numérisation 3D (LiDAR) de véhicules modifiés, maillage sous Blender, et analyses aérodynamiques complètes sous OpenFOAM pour évaluer portance et traînée. Livraison de rapports aérodynamiques recommandant des modifications (aileron, becquet, lip, jupes) adaptées à chaque véhicule.",
 		},
+		videos: [{ src: '/video/case-aero-wake.mp4', poster: '/video/case-aero-wake-poster.jpg' }],
 	},
 	{
 		title: { en: 'Lift and drag on an airfoil — numerical methods research paper', fr: 'Portance et traînée sur un profil aérodynamique — étude de méthodes numériques' },
@@ -217,10 +223,4 @@ export const otherProjects: ProjectEntry[] = [
 		},
 		images: ['390/img1.jpg', '390/img2.jpg', '390/img4.jpg', '390/img5.jpg', '390/img6.jpg'],
 	},
-];
-
-export const awards = [
-	"Dean's List (2023, 2024, 2025)",
-	'Graduated with Distinction',
-	'ENCS Merit Scholarship',
 ];

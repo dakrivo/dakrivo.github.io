@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { work, education } from '../../data/content';
+
+const lightboxId = (img: string) => `lb-${img.replace(/[^a-zA-Z0-9]/g, '-')}`;
 ---
 
 <BaseLayout
@@ -38,13 +40,20 @@ import { work, education } from '../../data/content';
 				{entry.images && (
 					<div class="gallery">
 						{entry.images.map((img) => (
-							<a href={`/assets/${img}`} target="_blank" rel="noopener">
-								<img src={`/assets/${img}`} loading="lazy" alt="" />
+							<a href={`#${lightboxId(img)}`}>
+								<img src={`/assets/${img}`} loading="lazy" alt={`${entry.org} — photo`} />
 							</a>
 						))}
 					</div>
 				)}
 			</article>
+		))}
+		{work.flatMap((entry) => entry.images ?? []).map((img) => (
+			<div class="lightbox" id={lightboxId(img)}>
+				<a href="#" class="lightbox-backdrop" aria-label="Close"></a>
+				<img src={`/assets/${img}`} alt="" />
+				<a href="#" class="lightbox-close" aria-label="Close">×</a>
+			</div>
 		))}
 	</section>
 

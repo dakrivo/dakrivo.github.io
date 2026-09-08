@@ -10,6 +10,31 @@ interface Props {
 }
 
 const { title, description, current } = Astro.props;
+
+const personSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Deen Akrivos',
+	url: 'https://dakrivo.com',
+	jobTitle: 'MASc Researcher, Mechanical Engineering',
+	affiliation: {
+		'@type': 'CollegeOrUniversity',
+		name: 'Concordia University',
+	},
+	email: 'mailto:deenakrivos@gmail.com',
+	knowsAbout: [
+		'Computational Fluid Dynamics',
+		'Hydrogen Combustion',
+		'Turbulence Modelling',
+		'Machine Learning',
+		'Reinforcement Learning',
+	],
+	founder: {
+		'@type': 'Organization',
+		name: 'Vortic CFD',
+		url: 'https://vortic.ca',
+	},
+};
 ---
 
 <!doctype html>
@@ -24,6 +49,7 @@ const { title, description, current } = Astro.props;
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
+		<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
 	</head>
 	<body>
 		<Nav current={current} />

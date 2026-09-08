@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { bio, skills, awards } from '../data/content';
+import { bio, skills } from '../data/content';
 ---
 
 <BaseLayout
@@ -65,16 +65,6 @@ import { bio, skills, awards } from '../data/content';
 				<p class="mono">{skills.hpcMl.join(' · ')}</p>
 			</div>
 		</div>
-	</section>
-
-	<section class="container">
-		<h2>
-			<span data-i18n="en">Awards</span>
-			<span data-i18n="fr">Distinctions</span>
-		</h2>
-		<ul class="panel awards">
-			{awards.map((a) => <li>{a}</li>)}
-		</ul>
 	</section>
 </BaseLayout>
 
@@ -176,20 +166,6 @@ import { bio, skills, awards } from '../data/content';
 	.skill-groups p {
 		margin: 0;
 		font-size: 0.9rem;
-	}
-
-	.awards {
-		margin: var(--space-3) 0 var(--space-6);
-		list-style: none;
-		padding: var(--space-4) var(--space-5);
-	}
-
-	.awards li {
-		margin-bottom: var(--space-1);
-	}
-
-	.awards li:last-child {
-		margin-bottom: 0;
 	}
 
 	@media (max-width: 640px) {

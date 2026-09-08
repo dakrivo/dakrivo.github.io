@@ -50,3 +50,46 @@ a {
 /* language toggle: show/hide by data-lang on <html> */
 html[data-lang="en"] [data-i18n="fr"] { display: none !important; }
 html[data-lang="fr"] [data-i18n="en"] { display: none !important; }
+
+/* in-page image lightbox: anchors targeting a fragment reveal the matching overlay, no navigation */
+.lightbox {
+	display: none;
+	position: fixed;
+	inset: 0;
+	z-index: 100;
+	align-items: center;
+	justify-content: center;
+	padding: var(--space-5);
+}
+
+.lightbox:target {
+	display: flex;
+}
+
+.lightbox-backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(5, 3, 10, 0.88);
+}
+
+.lightbox img {
+	position: relative;
+	max-width: min(92vw, 1100px);
+	max-height: 85vh;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+	border-radius: var(--radius);
+	box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-close {
+	position: absolute;
+	top: var(--space-4);
+	right: var(--space-4);
+	color: var(--color-white);
+	font-size: 2rem;
+	line-height: 1;
+	text-decoration: none;
+	z-index: 1;
+}
