@@ -9,13 +9,18 @@ import { bio, skills, awards } from '../data/content';
 	current="home"
 >
 	<section class="container hero">
-		<img src="/assets/profile.jpg" alt="Deen Akrivos" class="portrait" />
-		<div>
-			<h1>Deen Akrivos</h1>
-			<p class="headline accent">
-				<span data-i18n="en">{bio.headline.en}</span>
-				<span data-i18n="fr">{bio.headline.fr}</span>
-			</p>
+		<div class="masthead">
+			<img src="/assets/profile.jpg" alt="Deen Akrivos" class="avatar" />
+			<div>
+				<h1>Deen Akrivos</h1>
+				<p class="headline accent">
+					<span data-i18n="en">{bio.headline.en}</span>
+					<span data-i18n="fr">{bio.headline.fr}</span>
+				</p>
+			</div>
+		</div>
+
+		<div class="bio">
 			{bio.paragraphs.map((p) => (
 				<p>
 					<span data-i18n="en">{p.en}</span>
@@ -36,11 +41,11 @@ import { bio, skills, awards } from '../data/content';
 	</section>
 
 	<section class="container">
-		<h2 data-i18n-heading>
+		<h2>
 			<span data-i18n="en">Toolkit</span>
 			<span data-i18n="fr">Outils</span>
 		</h2>
-		<div class="skill-groups">
+		<div class="panel skill-groups">
 			<div>
 				<h4 class="muted">
 					<span data-i18n="en">CFD & Engineering</span>
@@ -67,7 +72,7 @@ import { bio, skills, awards } from '../data/content';
 			<span data-i18n="en">Awards</span>
 			<span data-i18n="fr">Distinctions</span>
 		</h2>
-		<ul class="awards">
+		<ul class="panel awards">
 			{awards.map((a) => <li>{a}</li>)}
 		</ul>
 	</section>
@@ -75,28 +80,43 @@ import { bio, skills, awards } from '../data/content';
 
 <style>
 	.hero {
-		display: grid;
-		grid-template-columns: 220px 1fr;
-		gap: var(--space-6);
 		padding-top: var(--space-6);
 		padding-bottom: var(--space-6);
-		align-items: start;
 	}
 
-	.portrait {
-		width: 100%;
-		border-radius: var(--radius);
-		border: 1px solid var(--color-hairline);
+	.masthead {
+		display: flex;
+		align-items: center;
+		gap: var(--space-4);
+		margin-bottom: var(--space-5);
+	}
+
+	.avatar {
+		width: 96px;
+		height: 96px;
+		border-radius: 50%;
+		object-fit: cover;
+		border: 2px solid var(--color-hairline);
+		flex-shrink: 0;
 	}
 
 	h1 {
-		margin: 0 0 var(--space-2);
-		font-size: 2.4rem;
+		margin: 0;
+		font-size: 2.2rem;
+		letter-spacing: -0.01em;
 	}
 
 	.headline {
-		font-size: 1.1rem;
-		margin-top: 0;
+		font-size: 1.05rem;
+		margin: var(--space-1) 0 0;
+	}
+
+	.bio {
+		max-width: 700px;
+	}
+
+	.bio p {
+		font-size: 1.02rem;
 	}
 
 	.cta-row {
@@ -114,6 +134,12 @@ import { bio, skills, awards } from '../data/content';
 		font-weight: 600;
 		padding: var(--space-2) var(--space-4);
 		border-radius: var(--radius);
+		transition: transform 0.15s ease, box-shadow 0.15s ease;
+	}
+
+	.btn:hover {
+		transform: translateY(-1px);
+		box-shadow: 0 6px 20px -6px var(--color-accent-soft);
 	}
 
 	.btn.ghost {
@@ -122,11 +148,22 @@ import { bio, skills, awards } from '../data/content';
 		border: 1px solid var(--color-hairline);
 	}
 
+	.btn.ghost:hover {
+		border-color: var(--color-accent);
+	}
+
+	.panel {
+		background: var(--color-surface);
+		border: 1px solid var(--color-hairline);
+		border-radius: var(--radius);
+		padding: var(--space-4);
+	}
+
 	.skill-groups {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 		gap: var(--space-4);
-		margin-top: var(--space-4);
+		margin-top: var(--space-3);
 	}
 
 	.skill-groups h4 {
@@ -143,19 +180,22 @@ import { bio, skills, awards } from '../data/content';
 
 	.awards {
 		margin: var(--space-3) 0 var(--space-6);
-		padding-left: 1.2rem;
+		list-style: none;
+		padding: var(--space-4) var(--space-5);
 	}
 
 	.awards li {
 		margin-bottom: var(--space-1);
 	}
 
+	.awards li:last-child {
+		margin-bottom: 0;
+	}
+
 	@media (max-width: 640px) {
-		.hero {
-			grid-template-columns: 1fr;
-		}
-		.portrait {
-			max-width: 160px;
+		.masthead {
+			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 </style>

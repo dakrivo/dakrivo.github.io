@@ -57,12 +57,7 @@ export const work: WorkEntry[] = [
 		org: 'EffectiV, Montreal',
 		role: { en: 'Researcher — CFD Research Project (under NDA)', fr: 'Chercheur — projet de recherche CFD (sous NDA)' },
 		years: 'Sept 2026–Present',
-		bullets: [
-			{
-				en: 'Conducting applied CFD research for industry partner EffectiV on industrial HVAC airflow systems; project scope and methods are confidential under NDA.',
-				fr: "Recherche CFD appliquée pour le partenaire industriel EffectiV sur des systèmes de ventilation CVC industriels ; la portée et les méthodes du projet sont confidentielles (NDA).",
-			},
-		],
+		bullets: [],
 	},
 	{
 		org: 'Pratt & Whitney, Mirabel',
@@ -133,6 +128,7 @@ export const researchProjects: ProjectEntry[] = [
 			en: 'High-fidelity LES (validated to quasi-DNS accuracy) of dual reacting hydrogen jets in crossflow across a range of jet-to-jet spacings. Shows that reaction — not kinematics — organizes and drives coherent vortex shedding, with a dominant, phase-locked shedding mode strongly coherent with heat-release rate. Results are informing wall-confined, low-momentum-ratio hydrogen combustor design guidelines and are being prepared for peer-reviewed publication.',
 			fr: "Simulations LES haute-fidélité (validées à une précision quasi-DNS) de jets d'hydrogène réactifs jumelés en écoulement transversal, pour différents espacements inter-jets. Les résultats montrent que c'est la réaction, et non la cinématique, qui organise et entraîne le détachement tourbillonnaire cohérent, avec un mode de détachement dominant et verrouillé en phase avec le taux de dégagement de chaleur. Ces résultats orientent les lignes directrices de conception de chambres de combustion à l'hydrogène à faible rapport de quantité de mouvement, en vue d'une publication évaluée par les pairs.",
 		},
+		images: ['jicf/jicf-fig1.png', 'jicf/jicf-fig2.png'],
 		featured: true,
 	},
 	{
@@ -140,24 +136,15 @@ export const researchProjects: ProjectEntry[] = [
 			en: 'A velocity-feedback framework for deep reinforcement learning-augmented turbulence modelling',
 			fr: 'Un cadre à rétroaction de vitesse pour la modélisation de la turbulence augmentée par apprentissage par renforcement profond',
 		},
-		org: 'Concordia University, with E. E. Essel',
+		org: 'Concordia University',
 		years: '2025–Present',
 		tags: ['Reinforcement Learning', 'PyTorch', 'LibTorch', 'OpenFOAM', 'RANS/DNS'],
 		summary: {
 			en: 'A framework and toolkit for training reinforcement-learning turbulence closure models that correct RANS predictions against high-fidelity DNS/LES data, coupling OpenFOAM with PyTorch during training and a C++/LibTorch pipeline for production CFD inference. Built a standardized high-fidelity dataset, validated closures across multiple flow geometries, and co-supervised an undergraduate capstone team building a water tunnel for the CTRL.',
 			fr: "Un cadre et une boîte à outils pour entraîner des modèles de fermeture de turbulence par apprentissage par renforcement, corrigeant les prédictions RANS à partir de données DNS/LES haute-fidélité, couplant OpenFOAM et PyTorch à l'entraînement et un pipeline C++/LibTorch pour l'inférence en production. Un jeu de données haute-fidélité standardisé a été constitué, les fermetures validées sur plusieurs géométries d'écoulement, en co-supervisant une équipe de capstone au premier cycle construisant un tunnel hydrodynamique pour le CTRL.",
 		},
+		images: ['ml-turbulence/flow.png'],
 		featured: true,
-	},
-	{
-		title: { en: 'Industrial HVAC airflow CFD research', fr: 'Recherche CFD sur les écoulements CVC industriels' },
-		org: 'EffectiV, Montreal',
-		years: '2026–Present',
-		tags: ['CFD', 'HVAC', 'Industry'],
-		summary: {
-			en: 'Applied CFD research for industry partner EffectiV on industrial HVAC airflow systems. Project scope and methods are confidential under NDA.',
-			fr: "Recherche CFD appliquée pour le partenaire industriel EffectiV sur des systèmes de ventilation CVC industriels. La portée et les méthodes sont confidentielles (NDA).",
-		},
 	},
 ];
 
@@ -236,5 +223,4 @@ export const awards = [
 	"Dean's List (2023, 2024, 2025)",
 	'Graduated with Distinction',
 	'ENCS Merit Scholarship',
-	'Golden Key Award',
 ];

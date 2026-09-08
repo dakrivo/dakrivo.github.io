@@ -62,15 +62,33 @@ const links = [
 	}
 
 	.links a {
+		position: relative;
 		text-decoration: none;
 		color: var(--color-muted);
 		font-size: 0.95rem;
 		transition: color 0.15s ease;
+		padding-bottom: 2px;
+	}
+
+	.links a::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 100%;
+		bottom: 0;
+		height: 1px;
+		background: var(--color-accent);
+		transition: right 0.2s ease;
 	}
 
 	.links a:hover,
 	.links a.active {
 		color: var(--color-white);
+	}
+
+	.links a:hover::after,
+	.links a.active::after {
+		right: 0;
 	}
 
 	.lang-toggle {
