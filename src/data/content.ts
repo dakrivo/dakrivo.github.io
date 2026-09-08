@@ -2,13 +2,13 @@ export type Bi = { en: string; fr: string };
 
 export const bio: { headline: Bi; paragraphs: Bi[] } = {
 	headline: {
-		en: 'MASc researcher working across CFD and machine learning.',
-		fr: "Chercheur à la maîtrise, à la croisée de la CFD et de l'apprentissage automatique.",
+		en: 'Researching hydrogen combustion and machine learning for cleaner propulsion and power.',
+		fr: "Recherche sur la combustion de l'hydrogène et l'apprentissage automatique pour une propulsion et une production d'énergie plus propres.",
 	},
 	paragraphs: [
 		{
-			en: "I'm a Master's (MASc) researcher in Mechanical Engineering at Concordia University's Turbulence Research Lab (CTRL), working at the intersection of high-fidelity CFD and machine learning. My current research runs on two threads: large-eddy simulations of hydrogen combustion — a carbon-free fuel central to decarbonizing aviation and power generation — studying dual reacting hydrogen jets in crossflow for combustor design, and a reinforcement-learning framework for correcting RANS turbulence closures against DNS/LES data, built on a coupled OpenFOAM / PyTorch / LibTorch pipeline.",
-			fr: "Je suis chercheur à la maîtrise (MASc) en génie mécanique au Concordia Turbulence Research Lab (CTRL), à la croisée de la CFD haute-fidélité et de l'apprentissage automatique. Mes travaux actuels suivent deux axes : des simulations LES de la combustion de l'hydrogène — un carburant sans carbone central à la décarbonation de l'aviation et de la production d'énergie — sur des jets d'hydrogène réactifs jumelés en écoulement transversal pour la conception de chambres de combustion, et un cadre d'apprentissage par renforcement pour corriger les fermetures de turbulence RANS à partir de données DNS/LES, sur un pipeline couplé OpenFOAM / PyTorch / LibTorch.",
+			en: "Hydrogen combustion is central to decarbonizing aviation and power generation, but burning it safely and efficiently is still an open engineering problem. I'm a Master's (MASc) researcher in Mechanical Engineering at Concordia University's Turbulence Research Lab (CTRL), working on exactly that: large-eddy simulations of dual reacting hydrogen jets in crossflow for combustor design, alongside a reinforcement-learning framework for correcting RANS turbulence closures against DNS/LES data, built on a coupled OpenFOAM / PyTorch / LibTorch pipeline.",
+			fr: "La combustion de l'hydrogène est centrale à la décarbonation de l'aviation et de la production d'énergie, mais sa combustion sécuritaire et efficace demeure un problème d'ingénierie ouvert. Je suis chercheur à la maîtrise (MASc) en génie mécanique au Concordia Turbulence Research Lab (CTRL), où je travaille précisément sur cette question : des simulations LES de jets d'hydrogène réactifs jumelés en écoulement transversal pour la conception de chambres de combustion, ainsi qu'un cadre d'apprentissage par renforcement pour corriger les fermetures de turbulence RANS à partir de données DNS/LES, sur un pipeline couplé OpenFOAM / PyTorch / LibTorch.",
 		},
 		{
 			en: "Outside the lab, I founded Vortic CFD, turning CFD simulations of modified cars into short-form educational content, and spent several years working airside at Montreal-Trudeau airport as a licensed aircraft tow operator and team lead. I hold a Bachelor of Engineering (Mechanical, Co-op) from Concordia, graduated with distinction, and have taught thermodynamics and PDEs as a teaching assistant.",
