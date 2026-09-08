@@ -161,7 +161,7 @@ export const otherProjects: ProjectEntry[] = [
 		link: { href: 'https://vortic.ca', label: 'vortic.ca' },
 		videos: [
 			{ src: '/video/case-wing-hero.mp4', poster: '/video/case-wing-hero-poster.jpg' },
-			{ src: '/video/case-aero-groundeffect.mp4', poster: '/video/case-aero-groundeffect-poster.jpg' },
+			{ src: '/video/f1-wake-orbit.mp4', poster: '/video/f1-wake-orbit-poster.jpg' },
 		],
 	},
 	{
@@ -172,7 +172,6 @@ export const otherProjects: ProjectEntry[] = [
 			en: '3D-scanned (LiDAR) modified vehicles, meshed the geometry in Blender, and ran full aerodynamic analyses in OpenFOAM to evaluate lift and drag. Delivered comprehensive aerodynamic reports recommending modifications (spoiler, wing, lip, skirts) tailored to each vehicle.',
 			fr: "Numérisation 3D (LiDAR) de véhicules modifiés, maillage sous Blender, et analyses aérodynamiques complètes sous OpenFOAM pour évaluer portance et traînée. Livraison de rapports aérodynamiques recommandant des modifications (aileron, becquet, lip, jupes) adaptées à chaque véhicule.",
 		},
-		videos: [{ src: '/video/case-aero-wake.mp4', poster: '/video/case-aero-wake-poster.jpg' }],
 	},
 	{
 		title: { en: 'Lift and drag on an airfoil — numerical methods research paper', fr: 'Portance et traînée sur un profil aérodynamique — étude de méthodes numériques' },

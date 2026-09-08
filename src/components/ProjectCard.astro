@@ -43,7 +43,7 @@ const lightboxId = (img: string) => `lb-${img.replace(/[^a-zA-Z0-9]/g, '-')}`;
 	{project.videos && project.videos.length > 0 && (
 		<div class="gallery videos">
 			{project.videos.map((v) => (
-				<video src={v.src} poster={v.poster} controls muted loop playsinline preload="metadata" />
+				<video src={v.src} poster={v.poster} controls autoplay muted loop playsinline preload="auto" />
 			))}
 		</div>
 	)}
