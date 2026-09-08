@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { bio, skills, awards } from '../data/content';
+---
+
+<BaseLayout
+	title="Deen Akrivos"
+	description="MASc researcher in Mechanical Engineering — CFD, machine learning, and turbulence modelling."
+	current="home"
+>
+	<section class="container hero">
+		<img src="/assets/profile.jpg" alt="Deen Akrivos" class="portrait" />
+		<div>
+			<h1>Deen Akrivos</h1>
+			<p class="headline accent">
+				<span data-i18n="en">{bio.headline.en}</span>
+				<span data-i18n="fr">{bio.headline.fr}</span>
+			</p>
+			{bio.paragraphs.map((p) => (
+				<p>
+					<span data-i18n="en">{p.en}</span>
+					<span data-i18n="fr">{p.fr}</span>
+				</p>
+			))}
+			<div class="cta-row">
+				<a class="btn" href="/projects/">
+					<span data-i18n="en">See my research & projects</span>
+					<span data-i18n="fr">Voir mes recherches et projets</span>
+				</a>
+				<a class="btn ghost" href="/contact/">
+					<span data-i18n="en">Get in touch</span>
+					<span data-i18n="fr">Me contacter</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="container">
+		<h2 data-i18n-heading>
+			<span data-i18n="en">Toolkit</span>
+			<span data-i18n="fr">Outils</span>
+		</h2>
+		<div class="skill-groups">
+			<div>
+				<h4 class="muted">
+					<span data-i18n="en">CFD & Engineering</span>
+					<span data-i18n="fr">CFD et ingénierie</span>
+				</h4>
+				<p class="mono">{skills.tools.join(' · ')}</p>
+			</div>
+			<div>
+				<h4 class="muted">
+					<span data-i18n="en">Programming</span>
+					<span data-i18n="fr">Programmation</span>
+				</h4>
+				<p class="mono">{skills.languages.join(' · ')}</p>
+			</div>
+			<div>
+				<h4 class="muted">HPC / ML</h4>
+				<p class="mono">{skills.hpcMl.join(' · ')}</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="container">
+		<h2>
+			<span data-i18n="en">Awards</span>
+			<span data-i18n="fr">Distinctions</span>
+		</h2>
+		<ul class="awards">
+			{awards.map((a) => <li>{a}</li>)}
+		</ul>
+	</section>
+</BaseLayout>
+
+<style>
+	.hero {
+		display: grid;
+		grid-template-columns: 220px 1fr;
+		gap: var(--space-6);
+		padding-top: var(--space-6);
+		padding-bottom: var(--space-6);
+		align-items: start;
+	}
+
+	.portrait {
+		width: 100%;
+		border-radius: var(--radius);
+		border: 1px solid var(--color-hairline);
+	}
+
+	h1 {
+		margin: 0 0 var(--space-2);
+		font-size: 2.4rem;
+	}
+
+	.headline {
+		font-size: 1.1rem;
+		margin-top: 0;
+	}
+
+	.cta-row {
+		display: flex;
+		gap: var(--space-3);
+		margin-top: var(--space-4);
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		display: inline-block;
+		text-decoration: none;
+		background: var(--color-accent);
+		color: var(--color-bg);
+		font-weight: 600;
+		padding: var(--space-2) var(--space-4);
+		border-radius: var(--radius);
+	}
+
+	.btn.ghost {
+		background: transparent;
+		color: var(--color-white);
+		border: 1px solid var(--color-hairline);
+	}
+
+	.skill-groups {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: var(--space-4);
+		margin-top: var(--space-4);
+	}
+
+	.skill-groups h4 {
+		margin: 0 0 var(--space-1);
+		font-size: 0.85rem;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+
+	.skill-groups p {
+		margin: 0;
+		font-size: 0.9rem;
+	}
+
+	.awards {
+		margin: var(--space-3) 0 var(--space-6);
+		padding-left: 1.2rem;
+	}
+
+	.awards li {
+		margin-bottom: var(--space-1);
+	}
+
+	@media (max-width: 640px) {
+		.hero {
+			grid-template-columns: 1fr;
+		}
+		.portrait {
+			max-width: 160px;
+		}
+	}
+</style>

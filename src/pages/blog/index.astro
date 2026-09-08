@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<BaseLayout title="Blog — Deen Akrivos" description="Notes on research, CFD, and Vortic." current="blog">
+	<section class="container section">
+		<h1>Blog</h1>
+		{posts.length === 0 && <p class="muted">Nothing here yet.</p>}
+		<ul class="post-list">
+			{posts.map((post) => (
+				<li>
+					<a href={`/blog/${post.id}/`}>
+						<span class="post-title">{post.data.title}</span>
+						<span class="post-date mono muted">
+							{post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+						</span>
+					</a>
+					<p class="muted">{post.data.description}</p>
+				</li>
+			))}
+		</ul>
+	</section>
+</BaseLayout>
+
+<style>
+	.section {
+		padding-top: var(--space-6);
+		padding-bottom: var(--space-6);
+	}
+
+	.post-list {
+		list-style: none;
+		padding: 0;
+	}
+
+	.post-list li {
+		border-bottom: 1px solid var(--color-hairline);
+		padding: var(--space-4) 0;
+	}
+
+	.post-list a {
+		display: flex;
+		justify-content: space-between;
+		text-decoration: none;
+		gap: var(--space-3);
+	}
+
+	.post-title {
+		font-size: 1.1rem;
+		font-weight: 600;
+	}
+
+	.post-date {
+		white-space: nowrap;
+		font-size: 0.85rem;
+	}
+</style>

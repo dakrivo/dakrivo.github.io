@@ -1,0 +1,117 @@
+---
+import type { ProjectEntry } from '../data/content';
+
+interface Props {
+	project: ProjectEntry;
+}
+
+const { project } = Astro.props;
+---
+
+<article class:list={['card', { featured: project.featured }]}>
+	<div class="card-head">
+		<h3>
+			<span data-i18n="en">{project.title.en}</span>
+			<span data-i18n="fr">{project.title.fr}</span>
+		</h3>
+		<span class="years mono muted">{project.years}</span>
+	</div>
+	{project.org && <p class="org muted">{project.org}</p>}
+	<div class="tags">
+		{project.tags.map((tag) => <span class="tag mono">{tag}</span>)}
+	</div>
+	<p class="summary">
+		<span data-i18n="en">{project.summary.en}</span>
+		<span data-i18n="fr">{project.summary.fr}</span>
+	</p>
+	{project.link && (
+		<a class="link accent" href={project.link.href} target="_blank" rel="noopener">
+			{project.link.label} →
+		</a>
+	)}
+	{project.images && project.images.length > 0 && (
+		<div class="gallery">
+			{project.images.map((img) => (
+				<img src={`/assets/${img}`} loading="lazy" alt="" />
+			))}
+		</div>
+	)}
+</article>
+
+<style>
+	.card {
+		border: 1px solid var(--color-hairline);
+		border-radius: var(--radius);
+		background: var(--color-surface);
+		padding: var(--space-4);
+		margin-bottom: var(--space-4);
+	}
+
+	.card.featured {
+		border-color: var(--color-accent-soft);
+	}
+
+	.card-head {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: var(--space-3);
+	}
+
+	.card-head h3 {
+		margin: 0;
+		font-size: 1.15rem;
+		line-height: 1.35;
+	}
+
+	.years {
+		white-space: nowrap;
+		font-size: 0.85rem;
+	}
+
+	.org {
+		margin: var(--space-1) 0 0;
+		font-size: 0.9rem;
+	}
+
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-2);
+		margin: var(--space-3) 0;
+	}
+
+	.tag {
+		font-size: 0.75rem;
+		color: var(--color-accent);
+		background: var(--color-accent-soft);
+		border-radius: 999px;
+		padding: 2px var(--space-2);
+	}
+
+	.summary {
+		margin: 0;
+		color: var(--color-white);
+	}
+
+	.link {
+		display: inline-block;
+		margin-top: var(--space-3);
+		text-decoration: none;
+		font-size: 0.9rem;
+	}
+
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+		gap: var(--space-2);
+		margin-top: var(--space-3);
+	}
+
+	.gallery img {
+		width: 100%;
+		height: 90px;
+		object-fit: cover;
+		border-radius: var(--radius);
+	}
+</style>

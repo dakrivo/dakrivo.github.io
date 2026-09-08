@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { work, education } from '../../data/content';
+---
+
+<BaseLayout
+	title="Work Experience — Deen Akrivos"
+	description="Work experience across aerospace, manufacturing, and research."
+	current="work"
+>
+	<section class="container section">
+		<h1>
+			<span data-i18n="en">Work Experience</span>
+			<span data-i18n="fr">Expérience professionnelle</span>
+		</h1>
+		{work.map((entry) => (
+			<article class="entry">
+				<div class="entry-head">
+					<div>
+						<h3>{entry.org}</h3>
+						<p class="role muted">
+							<span data-i18n="en">{entry.role.en}</span>
+							<span data-i18n="fr">{entry.role.fr}</span>
+						</p>
+					</div>
+					<span class="years mono muted">{entry.years}</span>
+				</div>
+				<ul>
+					{entry.bullets.map((b) => (
+						<li>
+							<span data-i18n="en">{b.en}</span>
+							<span data-i18n="fr">{b.fr}</span>
+						</li>
+					))}
+				</ul>
+				{entry.images && (
+					<div class="gallery">
+						{entry.images.map((img) => <img src={`/assets/${img}`} loading="lazy" alt="" />)}
+					</div>
+				)}
+			</article>
+		))}
+	</section>
+
+	<section class="container section">
+		<h1>
+			<span data-i18n="en">Education</span>
+			<span data-i18n="fr">Formation</span>
+		</h1>
+		{education.map((e) => (
+			<article class="entry">
+				<div class="entry-head">
+					<div>
+						<h3>
+							<span data-i18n="en">{e.school.en}</span>
+							<span data-i18n="fr">{e.school.fr}</span>
+						</h3>
+						<p class="role muted">
+							<span data-i18n="en">{e.degree.en}</span>
+							<span data-i18n="fr">{e.degree.fr}</span>
+						</p>
+					</div>
+					<span class="years mono muted">{e.years}</span>
+				</div>
+				{e.detail.en && (
+					<p class="detail">
+						<span data-i18n="en">{e.detail.en}</span>
+						<span data-i18n="fr">{e.detail.fr}</span>
+					</p>
+				)}
+			</article>
+		))}
+	</section>
+</BaseLayout>
+
+<style>
+	.section {
+		padding-top: var(--space-6);
+		padding-bottom: var(--space-6);
+	}
+
+	.entry {
+		border-bottom: 1px solid var(--color-hairline);
+		padding: var(--space-4) 0;
+	}
+
+	.entry:last-child {
+		border-bottom: none;
+	}
+
+	.entry-head {
+		display: flex;
+		justify-content: space-between;
+		gap: var(--space-3);
+		align-items: baseline;
+	}
+
+	.entry h3 {
+		margin: 0;
+	}
+
+	.role {
+		margin: var(--space-1) 0 0;
+	}
+
+	.detail {
+		margin: var(--space-2) 0 0;
+		font-size: 0.9rem;
+	}
+
+	.years {
+		white-space: nowrap;
+		font-size: 0.85rem;
+	}
+
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+		gap: var(--space-2);
+		margin-top: var(--space-3);
+	}
+
+	.gallery img {
+		width: 100%;
+		height: 100px;
+		object-fit: cover;
+		border-radius: var(--radius);
+	}
+</style>

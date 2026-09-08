@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { researchProjects, otherProjects } from '../../data/content';
+---
+
+<BaseLayout
+	title="Projects & Research — Deen Akrivos"
+	description="Research and engineering projects: CFD, machine learning for turbulence, and more."
+	current="projects"
+>
+	<section class="container section">
+		<h1>
+			<span data-i18n="en">Research</span>
+			<span data-i18n="fr">Recherche</span>
+		</h1>
+		{researchProjects.map((p) => <ProjectCard project={p} />)}
+	</section>
+
+	<section class="container section">
+		<h1>
+			<span data-i18n="en">Other Projects</span>
+			<span data-i18n="fr">Autres projets</span>
+		</h1>
+		{otherProjects.map((p) => <ProjectCard project={p} />)}
+	</section>
+</BaseLayout>
+
+<style>
+	.section {
+		padding-top: var(--space-6);
+		padding-bottom: var(--space-6);
+	}
+</style>

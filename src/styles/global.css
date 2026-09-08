@@ -1,0 +1,52 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource/jetbrains-mono';
+@import './tokens.css';
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: var(--color-bg);
+	color: var(--color-white);
+	font-family: var(--font-body);
+	font-size: 1rem;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+}
+
+img, video {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	color: inherit;
+}
+
+.container {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 0 var(--space-4);
+}
+
+.muted {
+	color: var(--color-muted);
+}
+
+.accent {
+	color: var(--color-accent);
+}
+
+.mono {
+	font-family: var(--font-mono);
+}
+
+/* language toggle: show/hide by data-lang on <html> */
+html[data-lang="en"] [data-i18n="fr"] { display: none !important; }
+html[data-lang="fr"] [data-i18n="en"] { display: none !important; }

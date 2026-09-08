@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+	title="Contact — Deen Akrivos"
+	description="Get in touch with Deen Akrivos."
+	current="contact"
+>
+	<section class="container section">
+		<h1>
+			<span data-i18n="en">Contact</span>
+			<span data-i18n="fr">Contact</span>
+		</h1>
+		<p>
+			<span data-i18n="en">The best way to reach me is by email. I'm happy to talk research, CFD, Vortic, or anything else on the site.</span>
+			<span data-i18n="fr">La meilleure façon de me joindre est par courriel. Je discute volontiers de recherche, de CFD, de Vortic, ou de tout autre sujet du site.</span>
+		</p>
+		<a class="btn" href="mailto:deenakrivos@gmail.com">deenakrivos@gmail.com</a>
+	</section>
+</BaseLayout>
+
+<style>
+	.section {
+		padding-top: var(--space-6);
+		padding-bottom: var(--space-6);
+	}
+
+	.btn {
+		display: inline-block;
+		text-decoration: none;
+		background: var(--color-accent);
+		color: var(--color-bg);
+		font-weight: 600;
+		padding: var(--space-2) var(--space-4);
+		border-radius: var(--radius);
+		margin-top: var(--space-3);
+	}
+</style>
