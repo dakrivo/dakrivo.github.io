@@ -159,10 +159,7 @@ export const otherProjects: ProjectEntry[] = [
 			fr: "Fondateur et responsable de Vortic CFD, une entreprise de services en IA appliquant la modélisation informée par la CFD, couplée à du contenu éducatif sur les réseaux sociaux basé sur de vraies simulations OpenFOAM de voitures modifiées.",
 		},
 		link: { href: 'https://vortic.ca', label: 'vortic.ca' },
-		videos: [
-			{ src: '/video/case-wing-hero.mp4', poster: '/video/case-wing-hero-poster.jpg' },
-			{ src: '/video/f1-wake-orbit.mp4', poster: '/video/f1-wake-orbit-poster.jpg' },
-		],
+		videos: [{ src: '/video/case-wing-hero.mp4', poster: '/video/case-wing-hero-poster.jpg' }],
 	},
 	{
 		title: { en: 'Aerodynamic analysis of modified race cars', fr: 'Analyse aérodynamique de voitures de course modifiées' },
