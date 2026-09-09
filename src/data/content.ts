@@ -54,7 +54,7 @@ export type WorkEntry = {
 
 export const work: WorkEntry[] = [
 	{
-		org: 'EffectiV, Montreal',
+		org: 'EffectiV, Blainville',
 		role: { en: 'Researcher — CFD Research Project (under NDA)', fr: 'Chercheur — projet de recherche CFD (sous NDA)' },
 		years: 'Sept 2026–Present',
 		bullets: [],
