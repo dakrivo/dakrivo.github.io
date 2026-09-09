@@ -50,9 +50,9 @@ const lightboxId = (img: string) => `lb-${img.replace(/[^a-zA-Z0-9]/g, '-')}`;
 		))}
 		{work.flatMap((entry) => entry.images ?? []).map((img) => (
 			<div class="lightbox" id={lightboxId(img)}>
-				<a href="#" class="lightbox-backdrop" aria-label="Close"></a>
+				<a href="#_" class="lightbox-backdrop" aria-label="Close"></a>
 				<img src={`/assets/${img}`} alt="" />
-				<a href="#" class="lightbox-close" aria-label="Close">×</a>
+				<a href="#_" class="lightbox-close" aria-label="Close">×</a>
 			</div>
 		))}
 	</section>
