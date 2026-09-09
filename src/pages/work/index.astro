@@ -6,7 +6,7 @@ const lightboxId = (img: string) => `lb-${img.replace(/[^a-zA-Z0-9]/g, '-')}`;
 ---
 
 <BaseLayout
-	title="Work Experience — Deen Akrivos"
+	title="Work Experience | Deen Akrivos"
 	description="Work experience across aerospace, manufacturing, and research."
 	current="work"
 >
@@ -41,7 +41,7 @@ const lightboxId = (img: string) => `lb-${img.replace(/[^a-zA-Z0-9]/g, '-')}`;
 					<div class="gallery">
 						{entry.images.map((img) => (
 							<a href={`#${lightboxId(img)}`}>
-								<img src={`/assets/${img}`} loading="lazy" alt={`${entry.org} — photo`} />
+								<img src={`/assets/${img}`} loading="lazy" alt={`${entry.org} photo`} />
 							</a>
 						))}
 					</div>

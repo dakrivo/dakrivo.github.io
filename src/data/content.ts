@@ -55,7 +55,7 @@ export type WorkEntry = {
 export const work: WorkEntry[] = [
 	{
 		org: 'EffectiV, Blainville',
-		role: { en: 'Researcher — CFD Research Project (under NDA)', fr: 'Chercheur — projet de recherche CFD (sous NDA)' },
+		role: { en: 'Researcher, CFD Research Project (under NDA)', fr: 'Chercheur, projet de recherche CFD (sous NDA)' },
 		years: 'Sept 2026–Present',
 		bullets: [],
 	},
@@ -92,7 +92,7 @@ export const work: WorkEntry[] = [
 	},
 	{
 		org: 'Primeflight, Montreal',
-		role: { en: 'Supervisor — Aircraft Loading', fr: 'Superviseur — chargement des avions' },
+		role: { en: 'Supervisor, Aircraft Loading', fr: 'Superviseur, chargement des avions' },
 		years: 'August 2022–August 2023',
 		bullets: [
 			{
@@ -126,7 +126,7 @@ export const researchProjects: ProjectEntry[] = [
 		years: '2025–Present',
 		tags: ['LES', 'OpenFOAM', 'StarCCM+', 'Combustion', 'HPC'],
 		summary: {
-			en: "Hydrogen is one of the most promising carbon-free fuels for decarbonizing aviation and power generation, but burning it safely and efficiently demands a much finer understanding of hydrogen flame behavior than conventional hydrocarbons require. This project runs high-fidelity LES (validated to quasi-DNS accuracy) of dual reacting hydrogen jets in crossflow across a range of jet-to-jet spacings, showing that reaction — not kinematics — organizes and drives coherent vortex shedding, with a dominant, phase-locked shedding mode strongly coherent with heat-release rate. Results are informing wall-confined, low-momentum-ratio hydrogen combustor design guidelines and are being prepared for peer-reviewed publication.",
+			en: "Hydrogen is one of the most promising carbon-free fuels for decarbonizing aviation and power generation, but burning it safely and efficiently demands a much finer understanding of hydrogen flame behavior than conventional hydrocarbons require. This project runs high-fidelity LES (validated to quasi-DNS accuracy) of dual reacting hydrogen jets in crossflow across a range of jet-to-jet spacings. The shedding turns out to be organized by the reaction itself rather than by the flow kinematics, with a dominant, phase-locked shedding mode strongly coherent with heat-release rate. Results are informing wall-confined, low-momentum-ratio hydrogen combustor design guidelines and are being prepared for peer-reviewed publication.",
 			fr: "L'hydrogène est l'un des carburants sans carbone les plus prometteurs pour décarboner l'aviation et la production d'énergie, mais sa combustion sécuritaire et efficace exige une compréhension beaucoup plus fine du comportement des flammes d'hydrogène que pour les hydrocarbures conventionnels. Ce projet réalise des simulations LES haute-fidélité (validées à une précision quasi-DNS) de jets d'hydrogène réactifs jumelés en écoulement transversal, pour différents espacements inter-jets. Les résultats montrent que c'est la réaction, et non la cinématique, qui organise et entraîne le détachement tourbillonnaire cohérent, avec un mode de détachement dominant et verrouillé en phase avec le taux de dégagement de chaleur. Ces résultats orientent les lignes directrices de conception de chambres de combustion à l'hydrogène à faible rapport de quantité de mouvement, en vue d'une publication évaluée par les pairs.",
 		},
 		images: ['jicf/jicf-fig1.png', 'jicf/jicf-fig2.png'],
@@ -171,7 +171,7 @@ export const otherProjects: ProjectEntry[] = [
 		},
 	},
 	{
-		title: { en: 'Lift and drag on an airfoil — numerical methods research paper', fr: 'Portance et traînée sur un profil aérodynamique — étude de méthodes numériques' },
+		title: { en: 'Lift and drag on an airfoil: a numerical methods research paper', fr: 'Portance et traînée sur un profil aérodynamique : étude de méthodes numériques' },
 		years: '2024',
 		tags: ['Numerical Methods', 'MATLAB'],
 		summary: {
@@ -185,8 +185,8 @@ export const otherProjects: ProjectEntry[] = [
 		years: '2021–2022',
 		tags: ['Personal', 'Mechanical'],
 		summary: {
-			en: 'Restored a discarded BMW 318is to full working condition, diagnosing and repairing the clutch, engine, suspension, brakes, and electrical systems — resold for three times the original purchase price.',
-			fr: "Restauration complète d'une BMW 318is abandonnée : diagnostic et réparation de l'embrayage, du moteur, de la suspension, des freins et du système électrique — revendue trois fois son prix d'achat initial.",
+			en: 'Restored a discarded BMW 318is to full working condition, diagnosing and repairing the clutch, engine, suspension, brakes, and electrical systems. Resold for three times the original purchase price.',
+			fr: "Restauration complète d'une BMW 318is abandonnée : diagnostic et réparation de l'embrayage, du moteur, de la suspension, des freins et du système électrique. Revendue trois fois son prix d'achat initial.",
 		},
 		images: ['e36/img1.jpg', 'e36/img2.jpg', 'e36/img4.jpeg', 'e36/img5.jpeg', 'e36/img6.jpg'],
 	},

@@ -7,7 +7,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
 );
 ---
 
-<BaseLayout title="Blog — Deen Akrivos" description="Notes on research, CFD, and Vortic." current="blog">
+<BaseLayout title="Blog | Deen Akrivos" description="Notes on research, CFD, and Vortic." current="blog">
 	<section class="container section">
 		<h1>Blog</h1>
 		{posts.length === 0 && <p class="muted">Nothing here yet.</p>}

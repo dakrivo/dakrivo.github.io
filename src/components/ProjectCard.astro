@@ -35,7 +35,7 @@ const lightboxId = (img: string) => `lb-${img.replace(/[^a-zA-Z0-9]/g, '-')}`;
 		<div class="gallery">
 			{project.images.map((img) => (
 				<a href={`#${lightboxId(img)}`}>
-					<img src={`/assets/${img}`} loading="lazy" alt={`${project.title.en} — figure`} />
+					<img src={`/assets/${img}`} loading="lazy" alt={`${project.title.en} figure`} />
 				</a>
 			))}
 		</div>
@@ -52,7 +52,7 @@ const lightboxId = (img: string) => `lb-${img.replace(/[^a-zA-Z0-9]/g, '-')}`;
 {project.images && project.images.map((img) => (
 	<div class="lightbox" id={lightboxId(img)}>
 		<a href="#" class="lightbox-backdrop" aria-label="Close"></a>
-		<img src={`/assets/${img}`} alt={`${project.title.en} — figure`} />
+		<img src={`/assets/${img}`} alt={`${project.title.en} figure`} />
 		<a href="#" class="lightbox-close" aria-label="Close">×</a>
 	</div>
 ))}
